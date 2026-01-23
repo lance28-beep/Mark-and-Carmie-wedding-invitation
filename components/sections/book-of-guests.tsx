@@ -35,6 +35,7 @@ export function BookOfGuests() {
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date())
   const [previousTotal, setPreviousTotal] = useState(0)
   const [showIncrease, setShowIncrease] = useState(false)
+  const [showAllGuests, setShowAllGuests] = useState(false)
 
   // Helper function to get initials from name
   const getInitials = (name: string): string => {
@@ -275,7 +276,7 @@ export function BookOfGuests() {
         {confirmedGuests.length > 0 && (
           <div className="max-w-5xl mx-auto px-2 sm:px-4 md:px-6">
             <div className="space-y-2 sm:space-y-3 md:space-y-4">
-              {confirmedGuests.map((guest) => (
+              {(showAllGuests ? confirmedGuests : confirmedGuests.slice(0, 5)).map((guest) => (
                 <div
                   key={guest.id}
                   className="relative group bg-white rounded-lg sm:rounded-xl md:rounded-2xl p-2.5 sm:p-4 md:p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-[#324D3E]/30 hover:border-[#324D3E]/60"
@@ -418,6 +419,18 @@ export function BookOfGuests() {
                 </div>
               ))}
             </div>
+            
+            {/* View More Button */}
+            {!showAllGuests && confirmedGuests.length > 5 && (
+              <div className="flex justify-center mt-4 sm:mt-6 md:mt-8">
+                <button
+                  onClick={() => setShowAllGuests(true)}
+                  className={`${cormorant.className} px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-4 bg-white/95 backdrop-blur-md border-2 border-[#324D3E]/40 rounded-lg sm:rounded-xl text-[#324D3E] font-semibold text-sm sm:text-base md:text-lg hover:bg-[#324D3E] hover:text-white hover:border-[#324D3E] transition-all duration-300 shadow-md hover:shadow-lg`}
+                >
+                  View More ({confirmedGuests.length - 5} more)
+                </button>
+              </div>
+            )}
           </div>
         )}
 
