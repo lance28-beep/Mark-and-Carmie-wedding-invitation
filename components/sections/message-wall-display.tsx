@@ -79,17 +79,17 @@ export default function MessageWallDisplay({ messages, loading }: MessageWallDis
           <div className="absolute -inset-2 sm:-inset-3 rounded-full border-2 border-[#606C60]/25 animate-ping"></div>
           <div className="absolute -inset-1.5 sm:-inset-2 rounded-full border border-[#606C60]/40"></div>
         </div>
-        <h3 className={`${cormorant.className} text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#606C60] mb-2 sm:mb-3 md:mb-4`}>
+        <h3 className={`${cormorant.className} text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 sm:mb-3 md:mb-4`}>
           No Messages Yet
         </h3>
-        <p className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg text-[#606C60]/95 max-w-md mx-auto leading-relaxed mb-4 sm:mb-5 md:mb-6`}>
+        <p className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg text-white max-w-md mx-auto leading-relaxed mb-4 sm:mb-5 md:mb-6`}>
           Be the first to share your heartfelt wishes for the happy couple!
         </p>
           <div className="mt-4 sm:mt-5 md:mt-6 lg:mt-8 flex justify-center">
             <div className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 bg-[#E1D5C7]/10 backdrop-blur-sm rounded-full border border-[#606C60]/60">
-              <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-[#606C60] animate-pulse" />
-              <span className={`${cormorant.className} text-[10px] sm:text-xs md:text-sm text-[#606C60]/90`}>Your message will appear here</span>
-              <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-[#606C60] animate-pulse" style={{ animationDelay: '0.5s' }} />
+              <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-white animate-pulse" />
+              <span className={`${cormorant.className} text-[10px] sm:text-xs md:text-sm text-white`}>Your message will appear here</span>
+              <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-white animate-pulse" style={{ animationDelay: '0.5s' }} />
             </div>
           </div>
       </div>
