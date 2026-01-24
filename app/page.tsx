@@ -17,6 +17,7 @@ import { Registry } from "@/components/sections/registry"
 import { FAQ } from "@/components/sections/faq"
 import { GuestInformation } from "@/components/sections/guest-information"
 import { Footer } from "@/components/sections/footer"
+import { LoveStory } from "@/components/sections/love-story"
 import { Hero as InvitationHero } from "@/components/loader/Hero"
 import { LoadingScreen } from "@/components/loader/LoadingScreen"
 import { Navbar } from "@/components/navbar"
@@ -54,7 +55,7 @@ export default function Home() {
             {enableDecor && (
               <div className="fixed inset-0 z-0 pointer-events-none">
                 <Suspense fallback={<div className="w-full h-full bg-gradient-to-b from-primary/10 to-secondary/5" />}>
-                  <Silk speed={5} scale={1.1} color="#738A6E" noiseIntensity={0.8} rotation={0.3} />
+                  <Silk speed={5} scale={1.1} color="#96A298" noiseIntensity={0.8} rotation={0.3} />
                 </Suspense>
               </div>
             )}
@@ -65,6 +66,7 @@ export default function Home() {
               <Welcome />
               <CoupleVideo /> 
               <Countdown />
+              <LoveStory />
               <Gallery />
               <Messages />
               <Details />
@@ -76,7 +78,7 @@ export default function Home() {
               <GuestList />
               <BookOfGuests />
               <FAQ />
-              <Registry />v
+              {/* <Registry /> */}
               <SnapShare />
               <Footer />
             </div>

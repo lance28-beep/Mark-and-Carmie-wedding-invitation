@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { Section } from "@/components/section"
 import { siteConfig } from "@/content/site"
 import Stack from "@/components/stack"
@@ -12,20 +11,12 @@ const cormorant = Cormorant_Garamond({
   weight: ["400", "500", "600"],
 })
 
-const storyTabs = [
-  { id: "groom", label: "Al's Story", subtitle: "His side of forever" },
-  { id: "bride", label: "Jhessa's Story", subtitle: "Her side of forever" },
-] as const
-
-type StoryTabId = (typeof storyTabs)[number]["id"]
-
 export function Narrative() {
-  const [activeStory, setActiveStory] = useState<StoryTabId>("groom")
-  const storyParagraphs =
-    siteConfig.narratives?.[activeStory]
-      ?.trim()
-      .split(/\n\s*\n/)
-      .filter(Boolean) ?? []
+  const ourStory = siteConfig.narratives?.ourStory || ""
+  const storyParagraphs = ourStory
+    .trim()
+    .split(/\n\s*\n/)
+    .filter(Boolean)
 
   return (
     <Section
@@ -57,13 +48,13 @@ export function Narrative() {
               className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-[#4A2E2E]`}
               style={{ textShadow: "0 2px 10px rgba(255,255,255,0.45)" }}
             >
-              Al &amp; Jhessa&apos;s Love Story
+              Francis &amp; Monique&apos;s Love Story
             </p>
             <h2
               className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#2F1C1C]"
               style={{ textShadow: "0 4px 18px rgba(255,255,255,0.6)" }}
             >
-              When Two Stories Became One
+              Our Story
             </h2>
 
             {/* Decorative flourish */}
@@ -146,32 +137,6 @@ export function Narrative() {
             <p className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm text-[#4A2E2E] tracking-[0.16em] uppercase`}>
               Two hearts, one promise
             </p>
-            {/* Tabs - compact single row with gentle wrapping on very small screens */}
-            <div className="relative inline-flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1.5 sm:gap-x-2 sm:gap-y-1 rounded-full border border-[#D2A4A4]/30 bg-white/40 backdrop-blur-sm px-1.5 py-1.5 max-w-full shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-              {storyTabs.map((tab) => {
-                const isActive = tab.id === activeStory
-                return (
-                  <motion.button
-                    key={tab.id}
-                    type="button"
-                    onClick={() => setActiveStory(tab.id)}
-                    className={`relative px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[0.7rem] sm:text-xs md:text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#D2A4A4] focus-visible:ring-offset-white/40 ${
-                      isActive
-                        ? "bg-[#F7E6CA] text-[#2F1C1C] shadow-xl shadow-[#D2A4A4]/25 border border-[#D2A4A4]/70"
-                        : "text-[#2F1C1C]/80 hover:text-[#2F1C1C] border border-transparent"
-                    }`}
-                    aria-pressed={isActive}
-                    aria-controls="story-panel"
-                    whileTap={{ scale: 0.96 }}
-                  >
-                    <span className="block leading-snug">{tab.label}</span>
-                    <span className="text-[0.55rem] sm:text-[0.6rem] uppercase tracking-[0.16em] font-normal text-[#4A2E2E]/80">
-                      {tab.subtitle}
-                    </span>
-                  </motion.button>
-                )
-              })}
-            </div>
           </div>
 
           <div id="story-panel" className="space-y-4 md:space-y-6" aria-live="polite">

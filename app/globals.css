@@ -261,3 +261,30 @@ html {
   background-clip: text;
   color: transparent;
 }
+
+/* Wedding colors for Love Story section */
+.bg-wedding-brown {
+  background-color: #4A2E2E;
+}
+
+.bg-wedding-paper {
+  background-color: #F7E6CA;
+}
+
+.text-wedding-brown {
+  color: #4A2E2E;
+}
+
+.text-wedding-paper {
+  color: #F7E6CA;
+}
+
+/* Font utilities for Love Story section */
+.font-heading {
+  font-family: "Style Script", cursive;
+  font-weight: 400;
+}
+
+.font-body {
+  font-family: "Crimson Text", serif;
+}

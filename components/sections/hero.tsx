@@ -33,6 +33,11 @@ const cinzel = Cinzel({
   weight: "700",
 })
 
+const cinzelRegular = Cinzel({
+  subsets: ["latin"],
+  weight: "400",
+})
+
 export function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [imagesLoaded, setImagesLoaded] = useState(false)
@@ -126,10 +131,10 @@ export function Hero() {
             }}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#738A6E]/90 via-[#738A6E]/70 to-transparent z-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#738A6E]/75 z-0" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(115,138,110,0.3),transparent_55%)] mix-blend-screen" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(115,138,110,0.28),transparent_35%)] opacity-70 animate-[pulse_9s_ease-in-out_infinite]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#606C60]/90 via-[#606C60]/70 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#606C60]/75 z-0" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(96,108,96,0.3),transparent_55%)] mix-blend-screen" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(96,108,96,0.28),transparent_35%)] opacity-70 animate-[pulse_9s_ease-in-out_infinite]" />
       </div>
 
       {SHOW_BUTTERFLIES && (
@@ -469,10 +474,11 @@ export function Hero() {
               we joyfully invite you to witness our union.
             </h1>
             <h1
-              className="style-script-regular text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl drop-shadow-2xl"
+              className={`${cinzelRegular.className} text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl drop-shadow-2xl`}
               style={{
                 color: '#FFFFFF',
                 textShadow: "0 0 24px rgba(0,0,0,0.9)",
+                fontWeight: 400,
               }}
             >
               <span className="block">{groomName}</span>
@@ -573,21 +579,21 @@ export function Hero() {
             <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch">
             <a
               href="#guest-list"
-              className={`${cormorant.className} group relative flex-1 sm:min-w-[200px] md:min-w-[220px] rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#324D3E]/70`}
+              className={`${cormorant.className} group relative flex-1 sm:min-w-[200px] md:min-w-[220px] rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#606C60]/70`}
               style={{
-                backgroundColor: "#324D3E",
-                boxShadow: "0 10px 24px rgba(50,77,62,0.4)",
+                backgroundColor: "#E1D5C7",
+                boxShadow: "0 10px 24px rgba(225,213,199,0.4)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#2a4035";
-                e.currentTarget.style.boxShadow = "0 12px 28px rgba(50,77,62,0.5)";
+                e.currentTarget.style.backgroundColor = "#d4c5b3";
+                e.currentTarget.style.boxShadow = "0 12px 28px rgba(225,213,199,0.5)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#324D3E";
-                e.currentTarget.style.boxShadow = "0 10px 24px rgba(50,77,62,0.4)";
+                e.currentTarget.style.backgroundColor = "#E1D5C7";
+                e.currentTarget.style.boxShadow = "0 10px 24px rgba(225,213,199,0.4)";
               }}
             >
-              <span className="relative z-10 inline-flex h-full min-h-[3rem] sm:min-h-[3.25rem] w-full items-center justify-center px-6 sm:px-8 text-[0.65rem] sm:text-[0.7rem] md:text-xs uppercase tracking-[0.32em] sm:tracking-[0.36em] text-[#F5D4CF] font-semibold transition-all duration-300" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.2)" }}>
+              <span className="relative z-10 inline-flex h-full min-h-[3rem] sm:min-h-[3.25rem] w-full items-center justify-center px-6 sm:px-8 text-[0.65rem] sm:text-[0.7rem] md:text-xs uppercase tracking-[0.32em] sm:tracking-[0.36em] text-[#606C60] font-semibold transition-all duration-300" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.1)" }}>
                 Confirm Attendance
               </span>
             </a>

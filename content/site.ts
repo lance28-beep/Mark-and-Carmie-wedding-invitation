@@ -1,36 +1,38 @@
 export const siteConfig = {
   couple: {
-    bride: "VANESSA JEAN PINO MONTERDE",
-    brideNickname: "Vanessa",
-    groom: "JOHN MARK RODRIGUEZ ROBLES",
-    groomNickname: "John",
+    bride: "Monique Grace Ann Ogalesco",
+    brideNickname: "Monique",
+    groom: "Francis Quito",
+    groomNickname: "Francis",
   },
   wedding: {
-    date: "MARCH 7, 2026",
-    time: "3:00 PM",
-    venue: "Caleruega Church",
+    date: "SEPTEMBER 06, 2026",
+    time: "4:00 PM",
+    venue: "Whispering Springs Wilderness Retreat",
     tagline: "are getting married!",
     theme: "Modern Filipiniana",
     motif: "#87AE73, #9CAF88, #F5F5DC, #E6D5B8, #D2B48C",
   },
   details: {
     rsvp: {
-      deadline: "January 31, 2026",
+      deadline: "September 01, 2026",
+      contact: "Monique Ogalesco",
+      phone: "647-622-5353",
     },
   },
   ceremony: {
-    location: "Caleruega Church, Caleruega Rd, Brgy. Kaylaway, Batulao Nasugbu, Batangas",
-    venue: "Caleruega Church",
-    date: "March 7 2026",
-    day: "Saturday",
-    time: "3:00 PM",
-    entourageTime: "2:30 PM",
-    guestsTime: "1:30 PM",
+    location: "Whispering Springs Wilderness Retreat, 141 Mercer Lane",
+    venue: "Whispering Springs Wilderness Retreat",
+    date: "September 6 2026",
+    day: "Sunday",
+    time: "4:00 PM",
+    entourageTime: "3:30 PM",
+    guestsTime: "3:00 PM",
   },
   reception: {
-    location: "Kayama Mountain Resort and Events Place, Sitio Kaytuyang, Brgy. Aga Nasugbu, Batangas",
-    venue: "Kayama Mountain Resort and Events Place",
-    date: "March 7, 2026",
+    location: "Whispering Springs Wilderness Retreat, 141 Mercer Lane",
+    venue: "Whispering Springs Wilderness Retreat",
+    date: "September 6, 2026",
     time: "5:00 PM",
   },
   dressCode: {
@@ -47,6 +49,17 @@ export const siteConfig = {
     note: "We kindly request our guests to dress in formal attire following our Modern Filipiniana theme."
   },
   narratives: {
+    ourStory: `Once upon a signature…
+
+Our story began with a simple signature, one that slowly turned into something magical. He was my financial advisor, and I was there to sign documents. It was July 5, 2021, and we met at the Lobby of the building. Little did we know, that ordinary day would start a story neither of us expected.
+
+I wasn't looking for anything, yet somehow, our connection grew in its own gentle, unexpected way. And then, on June 1, 2022, our story truly began—we became us. We found a love that feels like home.
+
+Our journey wasn't rushed, but perfectly timed. We believe that God brought us together in His own way and season.
+
+With hearts full of gratitude, we step into this new chapter hand in hand, trusting His plan and celebrating a love rooted in faith, patience, and grace.
+
+Today, we choose each other- again and again- and we can't wait to celebrate this new chapter with the people we love most.`,
     groom: `The first time Mark saw Catherine, time seemed to slow down. It was an ordinary day that instantly became unforgettable: one smile, one hello, and suddenly his world had a new center. He didn't have the perfect words ready, but he knew he had met someone who felt like home.
 
 Early conversations turned into late-night talks, sharing dreams, favorite meals, and whispered prayers for a future together. With every small adventure—coffee runs, long drives, quiet walks—Mark found himself choosing her over and over again. He loved how she laughed freely, how she listened with her whole heart, and how her faith steadied him.
@@ -64,7 +77,7 @@ Now, as they prepare to say yes before God and the people they love most, Cather
   },
   snapShare: {
     googleDriveLink: "https://drive.google.com/drive/folders/1lk45T1tGmm5_Oa48ABV_Cgrnpp1T2kTk?usp=sharing",
-    hashtag: "#anJOHNnaforeverniVANESSA",
+    hashtag: "#FRANCISfoundhisDestiNIQUE",
     instructions: "Please scan this QR Code, create a folder with your name and upload the photos and videos you have taken during our wedding reception. We are delighted to see your snaps too!",
   },
 }

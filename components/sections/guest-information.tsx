@@ -3,12 +3,17 @@
 import { Section } from "@/components/section"
 import { siteConfig } from "@/content/site"
 import { Car, Navigation, MapPin } from "lucide-react"
-import { Cormorant_Garamond } from "next/font/google"
+import { Cormorant_Garamond, Cinzel } from "next/font/google"
 import Image from "next/image"
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400"],
+})
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: "400",
 })
 
 export function GuestInformation() {
@@ -61,87 +66,134 @@ export function GuestInformation() {
 
         <div className="space-y-3 sm:space-y-4">
           {/* Attire Guidelines */}
-          <div className="relative rounded-2xl border border-[#738A6E]/40 bg-white/95 backdrop-blur-lg shadow-[0_18px_40px_rgba(0,0,0,0.15)] p-3.5 sm:p-5 overflow-hidden">
-            <div className="mb-2.5 sm:mb-3 relative z-10 text-center">
-              <h4 className="text-[0.75rem] sm:text-sm md:text-base font-semibold tracking-[0.3em] uppercase text-[#738A6E]">
-                Attire &amp; Motif
-              </h4>
+          <div className="relative rounded-xl sm:rounded-2xl md:rounded-3xl border-2 border-[#606C60]/30 bg-[#F5F2ED] backdrop-blur-lg shadow-[0_20px_50px_rgba(96,108,96,0.2)] p-3 sm:p-6 md:p-8 lg:p-10 xl:p-14 overflow-hidden">
+            {/* Decorative background elements */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute top-0 left-1/4 w-24 h-24 sm:w-32 sm:h-32 bg-[#606C60]/5 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 right-1/4 w-28 h-28 sm:w-40 sm:h-40 bg-[#606C60]/5 rounded-full blur-3xl" />
             </div>
 
-            <div className="relative w-full rounded-2xl overflow-hidden border border-[#738A6E]/40 shadow-xl bg-white p-4 sm:p-6 space-y-3 sm:space-y-4">
-              <div className="text-center space-y-2 sm:space-y-3">
-                <p className="text-xs sm:text-sm font-semibold text-[#738A6E]">
-                  {siteConfig.dressCode.note}
+            {/* Title */}
+            <div className="mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center relative z-10">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 md:gap-3 lg:gap-4">
+                <h4 className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-[#606C60] drop-shadow-sm`}>
+                  Wedding
+                </h4>
+                <h4 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#606C60] opacity-90">
+                  ATTIRE
+                </h4>
+              </div>
+              {/* Decorative underline */}
+              <div className="mt-3 sm:mt-4 md:mt-5 flex items-center justify-center gap-1.5 sm:gap-2">
+                <div className="w-6 sm:w-8 md:w-12 h-px bg-[#606C60]/30" />
+                <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-[#606C60]/50 rounded-full" />
+                <div className="w-6 sm:w-8 md:w-12 h-px bg-[#606C60]/30" />
+              </div>
+            </div>
+
+            {/* Description Text */}
+            <div className="mb-5 sm:mb-6 md:mb-8 lg:mb-10 relative z-10 px-2">
+              <div className="mb-3 sm:mb-4 md:mb-5">
+                <h5 className={`${cinzel.className} text-base sm:text-lg md:text-xl lg:text-2xl text-center text-[#606C60] mb-2 sm:mb-3`}>
+                  Attire guide
+                </h5>
+                <p className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg text-center text-[#606C60] font-semibold`}>
+                  Strictly semi formal/ formal attire
                 </p>
               </div>
+              <p className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-center text-[#606C60] max-w-3xl mx-auto leading-relaxed sm:leading-loose`}>
+                We know many like to come dressed to compliment the big day. Provided below is the color palette of our day. We look forward to seeing you all!
+              </p>
+            </div>
 
-              <div className="relative w-full aspect-[4/3] sm:aspect-[5/3] rounded-xl overflow-hidden border border-[#738A6E]/40 bg-white/90 mb-3">
-                <Image
-                  src="/Details/newguestattire.png"
-                  alt="Attire guideline"
-                  fill
-                  className="object-contain"
-                  sizes="(min-width: 1024px) 700px, (min-width: 640px) 600px, 100vw"
-                  priority={false}
+            {/* Color Palette - 5 blocks with arched tops */}
+            <div className="flex items-end justify-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 xl:gap-5 relative z-10">
+              {/* Color 1: #606C60 */}
+              <div className="flex-1 max-w-[60px] sm:max-w-[70px] md:max-w-[90px] lg:max-w-[110px] xl:max-w-[130px] group">
+                <div 
+                  className="w-full h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
+                  style={{ 
+                    backgroundColor: '#606C60',
+                    clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
+                    borderRadius: '0 0 4px 4px',
+                    boxShadow: '0 2px 8px rgba(96, 108, 96, 0.25)',
+                    border: '2px solid rgba(96, 108, 96, 0.3)'
+                  }}
                 />
               </div>
-
-              <div className="space-y-4">
-                <div>
-                  <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
-                    <div className="space-y-2">
-                      <p className="text-[#738A6E]">
-                        <span className="font-semibold">Ninong &amp; Guest:</span>
-                      </p>
-                      <p className="text-[#738A6E] pl-4">
-                        Barong Tagalog | Puting Panloob | Itim na Pantalon | Itim na sapatos
-                      </p>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="text-[#738A6E]">
-                        <span className="font-semibold">Ninang &amp; Guest:</span>
-                      </p>
-                      <p className="text-[#738A6E] pl-4">
-                        Modern Filipiniana or Traje de Mestiza
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Color Palette */}
-                <div className="space-y-2 pt-2">
-                  <p className="text-[10px] sm:text-xs font-semibold text-[#738A6E] uppercase tracking-wide text-left">
-                    Sage green &amp; Beige
-                  </p>
-                  <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-2.5">
-                    {/* Sage Green Colors */}
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-[#738A6E]/20 shadow-sm" style={{ backgroundColor: '#BCCFC0' }} />
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-[#738A6E]/20 shadow-sm" style={{ backgroundColor: '#8EA58B' }} />
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-[#738A6E]/20 shadow-sm" style={{ backgroundColor: '#738A6E' }} />
-                    {/* Beige Colors */}
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-[#738A6E]/20 shadow-sm" style={{ backgroundColor: '#F5F5DC' }} />
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-[#738A6E]/20 shadow-sm" style={{ backgroundColor: '#E6D5B8' }} />
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-[#738A6E]/20 shadow-sm" style={{ backgroundColor: '#D2B48C' }} />
-                  </div>
-                </div>
+              
+              {/* Color 2: #E1D5C7 */}
+              <div className="flex-1 max-w-[60px] sm:max-w-[70px] md:max-w-[90px] lg:max-w-[110px] xl:max-w-[130px] group">
+                <div 
+                  className="w-full h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
+                  style={{ 
+                    backgroundColor: '#E1D5C7',
+                    clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
+                    borderRadius: '0 0 4px 4px',
+                    boxShadow: '0 2px 8px rgba(225, 213, 199, 0.25)',
+                    border: '2px solid rgba(96, 108, 96, 0.3)'
+                  }}
+                />
+              </div>
+              
+              {/* Color 3: #96A298 */}
+              <div className="flex-1 max-w-[60px] sm:max-w-[70px] md:max-w-[90px] lg:max-w-[110px] xl:max-w-[130px] group">
+                <div 
+                  className="w-full h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
+                  style={{ 
+                    backgroundColor: '#96A298',
+                    clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
+                    borderRadius: '0 0 4px 4px',
+                    boxShadow: '0 2px 8px rgba(150, 162, 152, 0.25)',
+                    border: '2px solid rgba(96, 108, 96, 0.3)'
+                  }}
+                />
+              </div>
+              
+              {/* Color 4: #DFDBD2 */}
+              <div className="flex-1 max-w-[60px] sm:max-w-[70px] md:max-w-[90px] lg:max-w-[110px] xl:max-w-[130px] group">
+                <div 
+                  className="w-full h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
+                  style={{ 
+                    backgroundColor: '#DFDBD2',
+                    clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
+                    borderRadius: '0 0 4px 4px',
+                    boxShadow: '0 2px 8px rgba(223, 219, 210, 0.25)',
+                    border: '2px solid rgba(96, 108, 96, 0.3)'
+                  }}
+                />
+              </div>
+              
+              {/* Color 5: #555754 */}
+              <div className="flex-1 max-w-[60px] sm:max-w-[70px] md:max-w-[90px] lg:max-w-[110px] xl:max-w-[130px] group">
+                <div 
+                  className="w-full h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
+                  style={{ 
+                    backgroundColor: '#555754',
+                    clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
+                    borderRadius: '0 0 4px 4px',
+                    boxShadow: '0 2px 8px rgba(85, 87, 84, 0.25)',
+                    border: '2px solid rgba(96, 108, 96, 0.3)'
+                  }}
+                />
               </div>
             </div>
           </div>
 
           {/* Arrival Time & Reception Guidelines */}
-          <div className="relative rounded-2xl border border-[#738A6E]/40 bg-white/95 backdrop-blur-lg shadow-[0_18px_40px_rgba(0,0,0,0.15)] p-3.5 sm:p-5 overflow-hidden">
-            <div className="space-y-4 sm:space-y-5">
+          <div className="relative rounded-xl sm:rounded-2xl border-2 border-[#606C60]/30 bg-[#F5F2ED] backdrop-blur-lg shadow-[0_18px_40px_rgba(96,108,96,0.15)] p-3.5 sm:p-5 md:p-6 overflow-hidden">
+            <div className="space-y-3 sm:space-y-4 md:space-y-5">
               {/* Arrival Time */}
-              <div className="relative w-full rounded-2xl overflow-hidden border border-[#738A6E]/40 shadow-xl bg-white p-4 sm:p-6">
-                <div className="mb-3 sm:mb-4">
-                  <h4 className="text-[0.75rem] sm:text-sm md:text-base font-semibold tracking-[0.3em] uppercase text-[#738A6E] mb-3">
+              <div className="relative w-full rounded-xl sm:rounded-2xl overflow-hidden border-2 border-[#606C60]/30 shadow-lg bg-[#F5F2ED] p-3 sm:p-4 md:p-5 lg:p-6">
+                <div className="mb-2 sm:mb-3">
+                  <h4 className={`${cinzel.className} text-xs sm:text-sm md:text-base font-semibold tracking-[0.25em] uppercase text-[#606C60] mb-2 sm:mb-3`}>
                     Arrival Time
                   </h4>
                   <div className="space-y-2 sm:space-y-2.5">
-                    <p className="text-xs sm:text-sm text-[#738A6E] leading-relaxed">
-                      Kindly arrive by <span className="font-semibold text-[#738A6E]">2:30 PM</span> so we can begin the wedding ceremony promptly at exactly <span className="font-semibold text-[#738A6E]">3:00 PM</span>.
+                    <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#606C60] leading-relaxed`}>
+                      Kindly arrive by <span className="font-semibold text-[#606C60]">3:30 PM</span> so we can begin the wedding ceremony promptly at exactly <span className="font-semibold text-[#606C60]">4:00 PM</span>.
                     </p>
-                    <p className="text-xs sm:text-sm text-[#738A6E] leading-relaxed">
+                    <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#606C60] leading-relaxed`}>
                       Your punctuality means so much to us — and don&apos;t forget to have a light snack beforehand so you can enjoy the celebration comfortably!
                     </p>
                   </div>
@@ -149,13 +201,13 @@ export function GuestInformation() {
               </div>
 
               {/* Reception Guidelines */}
-              <div className="relative w-full rounded-2xl overflow-hidden border border-[#738A6E]/40 shadow-xl bg-white p-4 sm:p-6">
-                <div className="mb-3 sm:mb-4">
-                  <h4 className="text-[0.75rem] sm:text-sm md:text-base font-semibold tracking-[0.3em] uppercase text-[#738A6E] mb-3">
+              <div className="relative w-full rounded-xl sm:rounded-2xl overflow-hidden border-2 border-[#606C60]/30 shadow-lg bg-[#F5F2ED] p-3 sm:p-4 md:p-5 lg:p-6">
+                <div className="mb-2 sm:mb-3">
+                  <h4 className={`${cinzel.className} text-xs sm:text-sm md:text-base font-semibold tracking-[0.25em] uppercase text-[#606C60] mb-2 sm:mb-3`}>
                     Reception Guidelines
                   </h4>
                   <div className="space-y-2 sm:space-y-2.5">
-                    <p className="text-xs sm:text-sm text-[#738A6E] leading-relaxed">
+                    <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#606C60] leading-relaxed`}>
                       The seating will be formal, RSVP-style. That&apos;s why we&apos;re asking you to fill out this invitation form to secure your spot. Kindly do not bring plus ones unless explicitly stated in your invitation.
                     </p>
                   </div>
@@ -165,25 +217,25 @@ export function GuestInformation() {
           </div>
 
           {/* Travel & Parking - Compact */}
-          <div className="relative rounded-2xl border border-[#738A6E]/40 bg-white/95 backdrop-blur-lg shadow-[0_18px_40px_rgba(0,0,0,0.15)] p-3.5 sm:p-5 overflow-hidden">
+          <div className="relative rounded-xl sm:rounded-2xl border-2 border-[#606C60]/30 bg-[#F5F2ED] backdrop-blur-lg shadow-[0_18px_40px_rgba(96,108,96,0.15)] p-3.5 sm:p-5 md:p-6 overflow-hidden">
             {/* Header */}
             <div className="flex items-center justify-center gap-2 mb-2.5 sm:mb-3 relative z-10">
-              <div className="p-1.5 rounded-full shadow-md bg-white/95 border border-[#738A6E]/40">
-                <Car className="w-3.5 h-3.5 text-[#738A6E]" />
+              <div className="p-1.5 rounded-full shadow-md bg-[#F5F2ED] border-2 border-[#606C60]/30">
+                <Car className="w-3.5 h-3.5 text-[#606C60]" />
               </div>
-              <h4 className="font-semibold text-xs sm:text-base text-[#738A6E]">Parking &amp; Travel</h4>
+              <h4 className={`${cinzel.className} font-semibold text-xs sm:text-sm md:text-base text-[#606C60]`}>Parking &amp; Travel</h4>
             </div>
 
             <div className="space-y-3 relative z-10">
               {/* Parking */}
-              <div className="rounded-xl p-2.5 sm:p-3 border border-[#738A6E]/40 bg-white shadow-sm">
+              <div className="rounded-xl p-2.5 sm:p-3 border-2 border-[#606C60]/30 bg-[#F5F2ED] shadow-sm">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-[#738A6E] text-white">
+                  <div className="p-2 rounded-lg bg-[#606C60] text-[#E1D5C7]">
                     <Car className="w-4 h-4" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-[11px] sm:text-sm font-semibold text-[#738A6E]">Parking Available</p>
-                    <p className="text-[10px] sm:text-xs text-[#738A6E]/85">
+                    <p className={`${cormorant.className} text-[11px] sm:text-sm md:text-base font-semibold text-[#606C60]`}>Parking Available</p>
+                    <p className={`${cormorant.className} text-[10px] sm:text-xs md:text-sm text-[#606C60]/85`}>
                       Parking is available at the venue. Please arrive early to find a comfortable spot.
                     </p>
                   </div>
@@ -191,14 +243,14 @@ export function GuestInformation() {
               </div>
 
               {/* Transportation */}
-              <div className="rounded-xl p-2.5 sm:p-3 border border-[#738A6E]/40 bg-white shadow-sm">
+              <div className="rounded-xl p-2.5 sm:p-3 border-2 border-[#606C60]/30 bg-[#F5F2ED] shadow-sm">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-[#738A6E] text-white">
+                  <div className="p-2 rounded-lg bg-[#606C60] text-[#E1D5C7]">
                     <Navigation className="w-4 h-4" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-[11px] sm:text-sm font-semibold text-[#738A6E]">Transportation</p>
-                    <p className="text-[10px] sm:text-xs text-[#738A6E]/85">
+                    <p className={`${cormorant.className} text-[11px] sm:text-sm md:text-base font-semibold text-[#606C60]`}>Transportation</p>
+                    <p className={`${cormorant.className} text-[10px] sm:text-xs md:text-sm text-[#606C60]/85`}>
                       Private vehicles and local transport are welcome. Coordinate with friends or family and plan your
                       route ahead of time.
                     </p>
@@ -207,24 +259,24 @@ export function GuestInformation() {
               </div>
 
               {/* Tips */}
-              <div className="rounded-xl p-2.5 sm:p-3 border border-[#738A6E]/40 bg-white">
-                <p className="text-[11px] sm:text-sm font-semibold mb-2 flex items-center gap-2 text-[#738A6E]">
-                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#738A6E]/10 text-[#738A6E]">
+              <div className="rounded-xl p-2.5 sm:p-3 border-2 border-[#606C60]/30 bg-[#F5F2ED]">
+                <p className={`${cormorant.className} text-[11px] sm:text-sm md:text-base font-semibold mb-2 flex items-center gap-2 text-[#606C60]`}>
+                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#606C60]/10 text-[#606C60]">
                     <MapPin className="w-3.5 h-3.5" />
                   </span>
                   Quick Tips
                 </p>
-                <ul className="text-[10px] sm:text-xs space-y-1 text-[#738A6E]/90">
+                <ul className={`${cormorant.className} text-[10px] sm:text-xs md:text-sm space-y-1 text-[#606C60]/90`}>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#738A6E] mt-0.5">•</span>
+                    <span className="text-[#606C60] mt-0.5">•</span>
                     <span>Plan your route ahead to avoid unexpected delays.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#738A6E] mt-0.5">•</span>
+                    <span className="text-[#606C60] mt-0.5">•</span>
                     <span>Please avoid walking during the ceremony. Approach the coordinator or wait to be guided.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#738A6E] mt-0.5">•</span>
+                    <span className="text-[#606C60] mt-0.5">•</span>
                     <span>Coordinate carpooling with friends or family when possible.</span>
                   </li>
                 </ul>
