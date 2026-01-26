@@ -6,11 +6,11 @@ import { Cormorant_Garamond, Cinzel } from "next/font/google"
 import { siteConfig } from "@/content/site"
 
 const desktopImages: string[] = [
-  '/desktop-background/couple (12).webp',
-  '/desktop-background/couple (9).webp',
+  '/desktop-background/couple (1).webp',
+  '/desktop-background/couple (2).webp',
+  '/desktop-background/couple (3).webp',
   '/desktop-background/couple (5).webp',
-  '/desktop-background/couple (4).webp',
-  '/desktop-background/couple (7).webp',
+  '/desktop-background/couple (6).webp',
 ];
 
 const mobileImages: string[] = [
@@ -114,7 +114,7 @@ export function Hero() {
     : "THU"
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#51080F]">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#95B2A0]">
       <div className="absolute inset-0 w-full h-full">
         {imagesLoaded && backgroundImages.map((image, index) => (
           <div
@@ -131,10 +131,10 @@ export function Hero() {
             }}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#606C60]/90 via-[#606C60]/70 to-transparent z-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#606C60]/75 z-0" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(96,108,96,0.3),transparent_55%)] mix-blend-screen" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(96,108,96,0.28),transparent_35%)] opacity-70 animate-[pulse_9s_ease-in-out_infinite]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#BA94C3]/90 via-[#BA94C3]/70 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#BA94C3]/75 z-0" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(186,148,195,0.3),transparent_55%)] mix-blend-screen" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(186,148,195,0.28),transparent_35%)] opacity-70 animate-[pulse_9s_ease-in-out_infinite]" />
       </div>
 
       {SHOW_BUTTERFLIES && (
@@ -464,7 +464,7 @@ export function Hero() {
           <div className="space-y-2 sm:space-y-3 md:space-y-4">
             {/* Names & Tagline */}
             <h1
-              className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg tracking-[0.24em] sm:tracking-[0.28em] uppercase font-medium text-center text-[#F0F0EE]`}
+              className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg tracking-[0.24em] sm:tracking-[0.28em] uppercase font-medium text-center text-white`}
               style={{
                 textShadow: "0 2px 10px rgba(0,0,0,0.75)",
               }}
@@ -490,7 +490,7 @@ export function Hero() {
           {/* Date & Time block */}
           <div className="w-full max-w-2xl mx-auto">
             <div
-              className={`${cormorant.className} flex flex-col items-center gap-1.5 sm:gap-2.5 md:gap-3 text-[#FDF8F5]/95`}
+              className={`${cormorant.className} flex flex-col items-center gap-1.5 sm:gap-2.5 md:gap-3 text-white`}
               style={{ textShadow: "0 4px 16px rgba(0,0,0,0.6)" }}
             >
               <span
@@ -555,7 +555,7 @@ export function Hero() {
           {/* Venue */}
           <div className="space-y-1 sm:space-y-1.5 pt-1 sm:pt-2">
             <p
-              className={`${cinzel.className} text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-[0.22em] sm:tracking-[0.26em] md:tracking-[0.3em] text-[#F0F0EE] font-medium`}
+              className={`${cinzel.className} text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-[0.22em] sm:tracking-[0.26em] md:tracking-[0.3em] text-white font-medium`}
               style={{
                 textShadow: "0 2px 18px rgba(0,0,0,0.9)",
               }}
@@ -567,7 +567,7 @@ export function Hero() {
           {/* Call-to-action section */}
           <div className="pt-3 sm:pt-4 md:pt-5 flex flex-col gap-3 sm:gap-4 items-center max-w-2xl mx-auto w-full px-4">
             <p
-              className={`${cinzel.className} text-[0.7rem] sm:text-xs md:text-sm lg:text-base uppercase tracking-[0.24em] sm:tracking-[0.28em] text-[#F0F0EE]/95 font-normal leading-relaxed text-center px-4`}
+              className={`${cinzel.className} text-[0.7rem] sm:text-xs md:text-sm lg:text-base uppercase tracking-[0.24em] sm:tracking-[0.28em] text-white font-normal leading-relaxed text-center px-4`}
               style={{
                 textShadow: "0 2px 14px rgba(0,0,0,0.7)",
               }}
@@ -579,21 +579,21 @@ export function Hero() {
             <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch">
             <a
               href="#guest-list"
-              className={`${cormorant.className} group relative flex-1 sm:min-w-[200px] md:min-w-[220px] rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#606C60]/70`}
+              className={`${cormorant.className} group relative flex-1 sm:min-w-[200px] md:min-w-[220px] rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#95B2A0]/70`}
               style={{
-                backgroundColor: "#E1D5C7",
-                boxShadow: "0 10px 24px rgba(225,213,199,0.4)",
+                backgroundColor: "#95B2A0",
+                boxShadow: "0 10px 24px rgba(149,178,160,0.4)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#d4c5b3";
-                e.currentTarget.style.boxShadow = "0 12px 28px rgba(225,213,199,0.5)";
+                e.currentTarget.style.backgroundColor = "#7a9685";
+                e.currentTarget.style.boxShadow = "0 12px 28px rgba(149,178,160,0.5)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#E1D5C7";
-                e.currentTarget.style.boxShadow = "0 10px 24px rgba(225,213,199,0.4)";
+                e.currentTarget.style.backgroundColor = "#95B2A0";
+                e.currentTarget.style.boxShadow = "0 10px 24px rgba(149,178,160,0.4)";
               }}
             >
-              <span className="relative z-10 inline-flex h-full min-h-[3rem] sm:min-h-[3.25rem] w-full items-center justify-center px-6 sm:px-8 text-[0.65rem] sm:text-[0.7rem] md:text-xs uppercase tracking-[0.32em] sm:tracking-[0.36em] text-[#606C60] font-semibold transition-all duration-300" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.1)" }}>
+              <span className="relative z-10 inline-flex h-full min-h-[3rem] sm:min-h-[3.25rem] w-full items-center justify-center px-6 sm:px-8 text-[0.65rem] sm:text-[0.7rem] md:text-xs uppercase tracking-[0.32em] sm:tracking-[0.36em] text-white font-semibold transition-all duration-300" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.1)" }}>
                 Confirm Attendance
               </span>
             </a>

@@ -91,6 +91,20 @@ export function GuestInformation() {
               </div>
             </div>
 
+            {/* Guest Attire Image */}
+            <div className="mb-5 sm:mb-6 md:mb-8 lg:mb-10 relative z-10 px-2">
+              <div className="relative w-full max-w-2xl mx-auto rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border-2 border-white/20">
+                <Image
+                  src="/Details/guestAttire.png"
+                  alt="Guest Attire Guide"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain"
+                  priority
+                />
+              </div>
+            </div>
+
             {/* Description Text */}
             <div className="mb-5 sm:mb-6 md:mb-8 lg:mb-10 relative z-10 px-2">
               <div className="mb-3 sm:mb-4 md:mb-5">
@@ -106,74 +120,46 @@ export function GuestInformation() {
               </p>
             </div>
 
-            {/* Color Palette - 5 blocks with arched tops */}
-            <div className="flex items-end justify-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 xl:gap-5 relative z-10">
-              {/* Color 1: #606C60 */}
-              <div className="flex-1 max-w-[60px] sm:max-w-[70px] md:max-w-[90px] lg:max-w-[110px] xl:max-w-[130px] group">
+            {/* Color Palette - 3 blocks with arched tops */}
+            <div className="flex items-end justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 relative z-10">
+              {/* Color 1: #CDA38B */}
+              <div className="flex-1 max-w-[80px] sm:max-w-[100px] md:max-w-[120px] lg:max-w-[140px] xl:max-w-[160px] group">
                 <div 
-                  className="w-full h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
+                  className="w-full h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
                   style={{ 
-                    backgroundColor: '#606C60',
+                    backgroundColor: '#CDA38B',
                     clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
                     borderRadius: '0 0 4px 4px',
-                    boxShadow: '0 2px 8px rgba(96, 108, 96, 0.25)',
-                    border: '2px solid rgba(96, 108, 96, 0.3)'
+                    boxShadow: '0 2px 8px rgba(205, 163, 139, 0.25)',
+                    border: '2px solid rgba(205, 163, 139, 0.3)'
                   }}
                 />
               </div>
               
-              {/* Color 2: #E1D5C7 */}
-              <div className="flex-1 max-w-[60px] sm:max-w-[70px] md:max-w-[90px] lg:max-w-[110px] xl:max-w-[130px] group">
+              {/* Color 2: #E4C9B8 */}
+              <div className="flex-1 max-w-[80px] sm:max-w-[100px] md:max-w-[120px] lg:max-w-[140px] xl:max-w-[160px] group">
                 <div 
-                  className="w-full h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
+                  className="w-full h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
                   style={{ 
-                    backgroundColor: '#E1D5C7',
+                    backgroundColor: '#E4C9B8',
                     clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
                     borderRadius: '0 0 4px 4px',
-                    boxShadow: '0 2px 8px rgba(225, 213, 199, 0.25)',
-                    border: '2px solid rgba(96, 108, 96, 0.3)'
+                    boxShadow: '0 2px 8px rgba(228, 201, 184, 0.25)',
+                    border: '2px solid rgba(228, 201, 184, 0.3)'
                   }}
                 />
               </div>
               
-              {/* Color 3: #96A298 */}
-              <div className="flex-1 max-w-[60px] sm:max-w-[70px] md:max-w-[90px] lg:max-w-[110px] xl:max-w-[130px] group">
+              {/* Color 3: #F4EBE2 */}
+              <div className="flex-1 max-w-[80px] sm:max-w-[100px] md:max-w-[120px] lg:max-w-[140px] xl:max-w-[160px] group">
                 <div 
-                  className="w-full h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
+                  className="w-full h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
                   style={{ 
-                    backgroundColor: '#96A298',
+                    backgroundColor: '#F4EBE2',
                     clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
                     borderRadius: '0 0 4px 4px',
-                    boxShadow: '0 2px 8px rgba(150, 162, 152, 0.25)',
-                    border: '2px solid rgba(96, 108, 96, 0.3)'
-                  }}
-                />
-              </div>
-              
-              {/* Color 4: #DFDBD2 */}
-              <div className="flex-1 max-w-[60px] sm:max-w-[70px] md:max-w-[90px] lg:max-w-[110px] xl:max-w-[130px] group">
-                <div 
-                  className="w-full h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
-                  style={{ 
-                    backgroundColor: '#E7E7E7',
-                    clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                    borderRadius: '0 0 4px 4px',
-                    boxShadow: '0 2px 8px rgba(223, 219, 210, 0.25)',
-                    border: '2px solid rgba(96, 108, 96, 0.3)'
-                  }}
-                />
-              </div>
-              
-              {/* Color 5: #555754 */}
-              <div className="flex-1 max-w-[60px] sm:max-w-[70px] md:max-w-[90px] lg:max-w-[110px] xl:max-w-[130px] group">
-                <div 
-                  className="w-full h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
-                  style={{ 
-                    backgroundColor: '#555754',
-                    clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                    borderRadius: '0 0 4px 4px',
-                    boxShadow: '0 2px 8px rgba(85, 87, 84, 0.25)',
-                    border: '2px solid rgba(96, 108, 96, 0.3)'
+                    boxShadow: '0 2px 8px rgba(244, 235, 226, 0.25)',
+                    border: '2px solid rgba(244, 235, 226, 0.3)'
                   }}
                 />
               </div>

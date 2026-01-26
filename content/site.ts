@@ -1,14 +1,14 @@
 export const siteConfig = {
   couple: {
-    bride: "Monique Grace Ann Ogalesco",
-    brideNickname: "Monique",
-    groom: "Francis Quito",
-    groomNickname: "Francis",
+    bride: "Carmela Jeanette Suarez Borillo",
+    brideNickname: "Carmie",
+    groom: "Mark Renfred Tabernilla Gabuco",
+    groomNickname: "Mark",
   },
   wedding: {
-    date: "SEPTEMBER 06, 2026",
-    time: "4:00 PM",
-    venue: "Whispering Springs Wilderness Retreat",
+    date: "JULY 20, 2026",
+    time: "3:00 PM",
+    venue: "Philippine Publishing House Church",
     tagline: "are getting married!",
     theme: "Modern Filipiniana",
     motif: "#87AE73, #9CAF88, #F5F5DC, #E6D5B8, #D2B48C",
@@ -16,23 +16,23 @@ export const siteConfig = {
   details: {
     rsvp: {
       deadline: "July 01, 2026",
-      contact: "Monique Ogalesco",
+      contact: "Carmie Borillo",
       phone: "647-622-5353",
     },
   },
   ceremony: {
-    location: "Whispering Springs Wilderness Retreat, 141 Mercer Lane",
-    venue: "Whispering Springs Wilderness Retreat",
-    date: "September 6 2026",
-    day: "Sunday",
-    time: "4:00 PM",
-    entourageTime: "3:30 PM",
-    guestsTime: "3:00 PM",
+    location: "Philippine Publishing House Church, Aguinaldo Highway, Brgy. Biga II, Silang, Cavite 4118, Philippines",
+    venue: "Philippine Publishing House Church",
+    date: "July 20, 2026",
+    day: "Monday",
+    time: "3:00 PM",
+    entourageTime: "2:30 PM",
+    guestsTime: "2:30 PM",
   },
   reception: {
-    location: "Whispering Springs Wilderness Retreat, 141 Mercer Lane",
-    venue: "Whispering Springs Wilderness Retreat",
-    date: "September 6, 2026",
+    location: "Life Hope Center, Southern Asia-Pacific Division (SSD), Aguinaldo Highway, San Miguel II Bypass, Silang, Cavite, Philippines",
+    venue: "Life Hope Center, Southern Asia-Pacific Division (SSD)",
+    date: "July 20, 2026",
     time: "5:00 PM",
   },
   dressCode: {
@@ -77,7 +77,7 @@ Now, as they prepare to say yes before God and the people they love most, Cather
   },
   snapShare: {
     googleDriveLink: "https://drive.google.com/drive/folders/1lk45T1tGmm5_Oa48ABV_Cgrnpp1T2kTk?usp=sharing",
-    hashtag: "#FRANCISfoundhisDestiNIQUE",
+    hashtag: "#MarkAndCarmie2026",
     instructions: "Please scan this QR Code, create a folder with your name and upload the photos and videos you have taken during our wedding reception. We are delighted to see your snaps too!",
   },
 }

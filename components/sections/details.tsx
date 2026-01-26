@@ -36,9 +36,9 @@ export function Details() {
   // Couple images from mobile-background (max 4)
   const coupleImages = [
     "/mobile-background/couple (1).webp",
-    "/desktop-background/couple (21).webp",
-    "/mobile-background/couple (22).webp",
-    "/mobile-background/couple (25).webp",
+    "/desktop-background/couple (2).webp",
+    "/mobile-background/couple (3).webp",
+    "/mobile-background/couple (4).webp",
   ]
   
   // Convert address to title case for display
@@ -54,8 +54,14 @@ export function Details() {
       .join(', ')
   }
   
-  const ceremonyLocation = siteConfig.ceremony.location
-  const receptionLocation = siteConfig.reception.location
+  // Explicit locations for this Details section (as provided)
+  const ceremonyVenue = "Philippine Publishing House Church"
+  const ceremonyLocation =
+    "Aguinaldo Highway, Brgy. Biga II, Silang, Cavite 4118, Philippines"
+  const receptionVenue =
+    "Life Hope Center,  Southern Asia-Pacific Division (SSD)"
+  const receptionLocation =
+    "Aguinaldo Highway, San Miguel II Bypass, Silang, Cavite, Philippines"
   const ceremonyLocationFormatted = formatAddress(ceremonyLocation)
   const receptionLocationFormatted = formatAddress(receptionLocation)
   
@@ -133,8 +139,8 @@ export function Details() {
   }
 
   // Generate Google Maps links
-  const ceremonyMapsLink = `https://maps.google.com/?q=${encodeURIComponent(siteConfig.ceremony.location)}`
-  const receptionMapsLink = `https://maps.google.com/?q=${encodeURIComponent(siteConfig.reception.location)}`
+  const ceremonyMapsLink = `https://maps.google.com/?q=${encodeURIComponent(ceremonyLocation)}`
+  const receptionMapsLink = `https://maps.google.com/?q=${encodeURIComponent(receptionLocation)}`
 
   const openInMaps = (link: string) => {
     window.open(link, "_blank", "noopener,noreferrer")
@@ -147,7 +153,7 @@ export function Details() {
     >
       {/* Background */}
       <div 
-        className="absolute inset-0 -z-10 bg-[#606C60]"
+        className="absolute inset-0 -z-10 bg-[#95B2A0]"
       />
       
       {/* Flower decoration - top left corner */}
@@ -159,7 +165,6 @@ export function Details() {
           height={300}
           className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-y-[-1]"
           priority={false}
-          style={{ filter: 'brightness(0) saturate(100%) invert(88%) sepia(5%) saturate(500%) hue-rotate(10deg) brightness(110%) contrast(90%)' }}
         />
       </div>
       
@@ -172,7 +177,6 @@ export function Details() {
           height={300}
           className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-x-[-1] scale-y-[-1]"
           priority={false}
-          style={{ filter: 'brightness(0) saturate(100%) invert(88%) sepia(5%) saturate(500%) hue-rotate(10deg) brightness(110%) contrast(90%)' }}
         />
       </div>
       
@@ -185,7 +189,6 @@ export function Details() {
           height={300}
           className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60"
           priority={false}
-          style={{ filter: 'brightness(0) saturate(100%) invert(88%) sepia(5%) saturate(500%) hue-rotate(10deg) brightness(110%) contrast(90%)' }}
         />
       </div>
       
@@ -198,7 +201,6 @@ export function Details() {
           height={300}
           className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-x-[-1]"
           priority={false}
-          style={{ filter: 'brightness(0) saturate(100%) invert(88%) sepia(5%) saturate(500%) hue-rotate(10deg) brightness(110%) contrast(90%)' }}
         />
       </div>
 
@@ -206,90 +208,86 @@ export function Details() {
       <div className="relative z-30 text-center mb-6 sm:mb-9 md:mb-12 px-3 sm:px-4">
         {/* Small label */}
         <p
-          className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-[#E1D5C7] mb-2`}
+          className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-white mb-2`}
         >
           Ceremony & Reception Details
         </p>
 
         <h2
-          className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#E1D5C7] mb-1.5 sm:mb-3 md:mb-4`}
+          className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-1.5 sm:mb-3 md:mb-4`}
         >
           Details
         </h2>
 
-        <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#E1D5C7] font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
+        <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-white font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
           All the important details to help you join us in celebrating our special day
         </p>
-        <p className={`${cormorant.className} text-[0.65rem] sm:text-xs md:text-sm text-[#E1D5C7] font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
+        <p className={`${cormorant.className} text-[0.65rem] sm:text-xs md:text-sm text-white font-light max-w-xl mx-auto leading-relaxed px-2 mb-2 sm:mb-3`}>
           RSVP Deadline: {siteConfig.details.rsvp.deadline}
         </p>
 
         {/* Decorative element below subtitle */}
         <div className="flex items-center justify-center gap-2 mt-3 sm:mt-4">
-          <div className="w-8 sm:w-12 md:w-16 h-px bg-gradient-to-r from-transparent via-[#E1D5C7]/80 to-transparent" />
-          <div className="w-1.5 h-1.5 bg-[#E1D5C7]/80 rounded-full" />
-          <div className="w-1.5 h-1.5 bg-[#E1D5C7]/60 rounded-full" />
-          <div className="w-1.5 h-1.5 bg-[#E1D5C7]/80 rounded-full" />
-          <div className="w-8 sm:w-12 md:w-16 h-px bg-gradient-to-r from-transparent via-[#E1D5C7]/80 to-transparent" />
+          <div className="w-8 sm:w-12 md:w-16 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+          <div className="w-1.5 h-1.5 bg-white/80 rounded-full" />
+          <div className="w-1.5 h-1.5 bg-white/60 rounded-full" />
+          <div className="w-1.5 h-1.5 bg-white/80 rounded-full" />
+          <div className="w-8 sm:w-12 md:w-16 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
         </div>
       </div>
 
-      {/* Ceremony Container */}
-      <div className="relative z-10 max-w-4xl mx-auto px-3 sm:px-5">
-        <div className="overflow-hidden rounded-xl sm:rounded-2xl border border-[#E1D5C7]/40 bg-[#E1D5C7] backdrop-blur-lg shadow-[0_18px_40px_rgba(225,213,199,0.15)] transition-transform duration-500 group hover:scale-[1.01]">
+      {/* Ceremony & Reception Containers - Separate */}
+      <div className="relative z-10 max-w-6xl mx-auto px-3 sm:px-5 space-y-6 sm:space-y-8">
+        {/* Ceremony Container */}
+        <div className="overflow-hidden rounded-xl sm:rounded-2xl border border-white/30 bg-[#BA94C3]/90 backdrop-blur-lg shadow-[0_18px_40px_rgba(0,0,0,0.15)] transition-transform duration-500 group hover:scale-[1.01]">
           {/* Ceremony image */}
           <div className="relative h-64 sm:h-80 md:h-96 w-full">
             <Image
-              src="/Details/ceremony&location.jpg"
+              src="/Details/PhilippinePublishingHouseChurch.jpg"
               alt={ceremonyLocationFormatted}
               fill
               className="object-cover"
               sizes="100vw"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#606C60]/95 via-[#606C60]/65 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#BA94C3]/90 via-[#BA94C3]/55 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end px-3 sm:px-6 pb-3 sm:pb-6">
-              <p className={`${cinzel.className} text-xl sm:text-2xl md:text-3xl font-normal leading-none drop-shadow-md mb-2 text-[#E1D5C7]`}>
-                Ceremony & Reception
+              <p
+                className={`${cinzel.className} text-xl sm:text-2xl md:text-3xl font-normal leading-none drop-shadow-md mb-2 text-white`}
+              >
+                Ceremony
               </p>
             </div>
           </div>
 
-          {/* Combined Details panel */}
-          <div className={`${cormorant.className} bg-[#E1D5C7] text-[#606C60] px-3 sm:px-6 py-4 sm:py-6 space-y-4 backdrop-blur-sm`}>
-            {/* Address */}
-            <div className="text-left pb-3 border-b border-[#606C60]/30">
-              <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#606C60] uppercase mb-1">
-                Location
+          {/* Ceremony Details panel */}
+          <div className={`${cormorant.className} bg-transparent text-white px-3 sm:px-6 py-4 sm:py-6 space-y-4`}>
+            {/* Venue */}
+            <div className="text-left pb-3 border-b border-white/25">
+              <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-white/80 uppercase mb-1">
+                Venue
               </p>
-              <p className="text-sm sm:text-base md:text-lg font-medium text-[#606C60]">
+              <p className={`${cinzel.className} text-base sm:text-lg md:text-xl text-white`}>
+                {ceremonyVenue}
+              </p>
+              <p className="text-sm sm:text-base md:text-lg font-medium text-white/90 break-words">
                 {ceremonyLocationFormatted}
               </p>
             </div>
 
-            {/* Date */}
-            <div className="text-left pb-3 border-b border-[#606C60]/30">
-              <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#606C60] uppercase mb-1">
-                Date
-              </p>
-              <p className="text-sm sm:text-base md:text-lg font-medium text-[#606C60]">
-                {formattedCeremonyDate}
-              </p>
-            </div>
-
-            {/* Ceremony & Reception Times */}
+            {/* Ceremony Date & Time */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-left">
-              <div className="rounded-md border border-[#606C60] bg-[#E1D5C7] px-2.5 py-2 shadow-sm">
-                <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#606C60] uppercase mb-0.5">
-                  Ceremony Time
+              <div className="rounded-md border border-white/30 bg-white/10 px-2.5 py-2 shadow-sm">
+                <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-white/80 uppercase mb-0.5">
+                  Date
                 </p>
-                <p className="text-sm sm:text-base font-bold text-[#606C60]">{siteConfig.ceremony.time}</p>
+                <p className="text-sm sm:text-base font-bold text-white">{formattedCeremonyDate}</p>
               </div>
-              <div className="rounded-md border border-[#606C60] bg-[#E1D5C7] px-2.5 py-2 shadow-sm">
-                <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#606C60] uppercase mb-0.5">
-                  Reception Time
+              <div className="rounded-md border border-white/30 bg-white/10 px-2.5 py-2 shadow-sm">
+                <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-white/80 uppercase mb-0.5">
+                  Time
                 </p>
-                <p className="text-sm sm:text-base font-bold text-[#606C60]">{siteConfig.reception.time}</p>
+                <p className="text-sm sm:text-base font-bold text-white">{siteConfig.ceremony.time}</p>
               </div>
             </div>
 
@@ -297,16 +295,98 @@ export function Details() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-3 pt-2">
               <button
                 onClick={() => openInMaps(ceremonyMapsLink)}
-                className="flex items-center justify-center gap-1.5 rounded-lg bg-[#606C60] text-[#E1D5C7] py-2.5 sm:py-3 shadow-lg hover:translate-y-[-2px] hover:bg-[#606C60]/90 transition-all text-xs sm:text-sm font-semibold"
+                className="flex items-center justify-center gap-1.5 rounded-lg bg-[#95B2A0] text-white py-2.5 sm:py-3 shadow-lg hover:translate-y-[-2px] hover:bg-[#7a9685] transition-all text-xs sm:text-sm font-semibold"
               >
                 <Navigation className="w-4 h-4" />
                 Get Directions
               </button>
               <button
                 onClick={() => copyToClipboard(ceremonyLocation, "ceremony")}
-                className="flex items-center justify-center gap-1.5 rounded-lg border border-[#606C60]/35 text-[#606C60] py-2.5 sm:py-3 hover:bg-[#606C60]/5 transition-all text-xs sm:text-sm font-semibold"
+                className="flex items-center justify-center gap-1.5 rounded-lg border border-white/40 text-white py-2.5 sm:py-3 hover:bg-white/10 transition-all text-xs sm:text-sm font-semibold"
               >
                 {copiedItems.has("ceremony") ? (
+                  <>
+                    <Check className="w-4 h-4" />
+                    Copied
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4" />
+                    Copy Address
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Reception Container */}
+        <div className="overflow-hidden rounded-xl sm:rounded-2xl border border-white/30 bg-[#BA94C3]/90 backdrop-blur-lg shadow-[0_18px_40px_rgba(0,0,0,0.15)] transition-transform duration-500 group hover:scale-[1.01]">
+          {/* Reception image */}
+          <div className="relative h-64 sm:h-80 md:h-96 w-full">
+            <Image
+              src="/Details/Life Hope Center.jpg"
+              alt={receptionLocationFormatted}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority={false}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#BA94C3]/90 via-[#BA94C3]/55 to-transparent" />
+            <div className="absolute inset-0 flex flex-col justify-end px-3 sm:px-6 pb-3 sm:pb-6">
+              <p
+                className={`${cinzel.className} text-xl sm:text-2xl md:text-3xl font-normal leading-none drop-shadow-md mb-2 text-white`}
+              >
+                Reception
+              </p>
+            </div>
+          </div>
+
+          {/* Reception Details panel */}
+          <div className={`${cormorant.className} bg-transparent text-white px-3 sm:px-6 py-4 sm:py-6 space-y-4`}>
+            {/* Venue */}
+            <div className="text-left pb-3 border-b border-white/25">
+              <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-white/80 uppercase mb-1">
+                Venue
+              </p>
+              <p className={`${cinzel.className} text-base sm:text-lg md:text-xl text-white`}>
+                {receptionVenue}
+              </p>
+              <p className="text-sm sm:text-base md:text-lg font-medium text-white/90 break-words">
+                {receptionLocationFormatted}
+              </p>
+            </div>
+
+            {/* Reception Date & Time */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-left">
+              <div className="rounded-md border border-white/30 bg-white/10 px-2.5 py-2 shadow-sm">
+                <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-white/80 uppercase mb-0.5">
+                  Date
+                </p>
+                <p className="text-sm sm:text-base font-bold text-white">{formattedReceptionDate}</p>
+              </div>
+              <div className="rounded-md border border-white/30 bg-white/10 px-2.5 py-2 shadow-sm">
+                <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-white/80 uppercase mb-0.5">
+                  Time
+                </p>
+                <p className="text-sm sm:text-base font-bold text-white">{siteConfig.reception.time}</p>
+              </div>
+            </div>
+
+            {/* Action buttons */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-3 pt-2">
+              <button
+                onClick={() => openInMaps(receptionMapsLink)}
+                className="flex items-center justify-center gap-1.5 rounded-lg bg-[#95B2A0] text-white py-2.5 sm:py-3 shadow-lg hover:translate-y-[-2px] hover:bg-[#7a9685] transition-all text-xs sm:text-sm font-semibold"
+              >
+                <Navigation className="w-4 h-4" />
+                Get Directions
+              </button>
+              <button
+                onClick={() => copyToClipboard(receptionLocation, "reception")}
+                className="flex items-center justify-center gap-1.5 rounded-lg border border-white/40 text-white py-2.5 sm:py-3 hover:bg-white/10 transition-all text-xs sm:text-sm font-semibold"
+              >
+                {copiedItems.has("reception") ? (
                   <>
                     <Check className="w-4 h-4" />
                     Copied
@@ -325,7 +405,7 @@ export function Details() {
 
       {/* Gentle Reminders Container */}
       <div className="relative z-10 max-w-4xl mx-auto px-3 sm:px-5 mt-8 sm:mt-12 md:mt-16">
-        <div className="relative overflow-hidden rounded-xl sm:rounded-2xl border border-[#E1D5C7]/40 bg-[#E1D5C7] backdrop-blur-lg shadow-[0_18px_40px_rgba(225,213,199,0.15)]">
+        <div className="relative overflow-hidden rounded-xl sm:rounded-2xl border border-white/30 bg-[#BA94C3]/90 backdrop-blur-lg shadow-[0_18px_40px_rgba(0,0,0,0.15)]">
           {/* Content */}
           <div className="relative z-10 px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10">
             {/* Animated couple photos carousel */}
@@ -342,7 +422,7 @@ export function Details() {
                 return (
                   <div
                     key={index}
-                    className={`relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg overflow-hidden border-2 border-[#E1D5C7]/60 shadow-lg transition-all duration-700 ease-in-out ${
+                    className={`relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg overflow-hidden border-2 border-white/60 shadow-lg transition-all duration-700 ease-in-out ${
                       isActive ? 'scale-110 z-10' : 'scale-100 opacity-70'
                     }`}
                     style={{
@@ -364,48 +444,48 @@ export function Details() {
             </div>
 
             {/* Title */}
-            <h3 className={`${cinzel.className} text-2xl sm:text-3xl md:text-4xl text-center text-[#606C60] mb-6 sm:mb-8 font-normal tracking-wide`}>
+            <h3 className={`${cinzel.className} text-2xl sm:text-3xl md:text-4xl text-center text-white mb-6 sm:mb-8 font-normal tracking-wide`}>
               GENTLE REMINDERS
             </h3>
 
             {/* Reminders List */}
             <div className="space-y-4 sm:space-y-5 md:space-y-6 max-w-2xl mx-auto">
               {/* Children Reminder */}
-              <div className="bg-white/50 rounded-lg p-4 sm:p-5 md:p-6 border border-[#E1D5C7]/40 shadow-sm">
-                <h4 className={`${cinzel.className} text-base sm:text-lg md:text-xl font-semibold text-[#606C60] mb-2 sm:mb-3`}>
+              <div className="bg-white/10 rounded-lg p-4 sm:p-5 md:p-6 border border-white/25 shadow-sm">
+                <h4 className={`${cinzel.className} text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3`}>
                   CHILDREN
                 </h4>
-                <p className={`${cormorant.className} text-sm sm:text-base md:text-lg text-[#606C60]/90 leading-relaxed`}>
+                <p className={`${cormorant.className} text-sm sm:text-base md:text-lg text-white/90 leading-relaxed`}>
                   To allow all of our guests to celebrate without distraction, we respectfully request that the wedding reception be an adults-only event. Thank you for your understanding.
                 </p>
               </div>
 
               {/* Unplugged Ceremony Reminder */}
-              <div className="bg-white/50 rounded-lg p-4 sm:p-5 md:p-6 border border-[#E1D5C7]/40 shadow-sm">
-                <h4 className={`${cinzel.className} text-base sm:text-lg md:text-xl font-semibold text-[#606C60] mb-2 sm:mb-3`}>
+              <div className="bg-white/10 rounded-lg p-4 sm:p-5 md:p-6 border border-white/25 shadow-sm">
+                <h4 className={`${cinzel.className} text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3`}>
                   UNPLUGGED CEREMONY
                 </h4>
-                <p className={`${cormorant.className} text-sm sm:text-base md:text-lg text-[#606C60]/90 leading-relaxed`}>
+                <p className={`${cormorant.className} text-sm sm:text-base md:text-lg text-white/90 leading-relaxed`}>
                   We are having an unplugged ceremony, meaning we kindly ask all guests to put away their phones and cameras. We want everyone to be fully in the moment with us. Don't worry—our professional photographer will capture all the special moments, and we'll be happy to share them with you later!
                 </p>
               </div>
 
               {/* Arrival Reminder */}
-              <div className="bg-white/50 rounded-lg p-4 sm:p-5 md:p-6 border border-[#E1D5C7]/40 shadow-sm">
-                <h4 className={`${cinzel.className} text-base sm:text-lg md:text-xl font-semibold text-[#606C60] mb-2 sm:mb-3`}>
+              <div className="bg-white/10 rounded-lg p-4 sm:p-5 md:p-6 border border-white/25 shadow-sm">
+                <h4 className={`${cinzel.className} text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3`}>
                   ARRIVAL
                 </h4>
-                <p className={`${cormorant.className} text-sm sm:text-base md:text-lg text-[#606C60]/90 leading-relaxed`}>
+                <p className={`${cormorant.className} text-sm sm:text-base md:text-lg text-white/90 leading-relaxed`}>
                   To ensure everything runs smoothly, please arrive at least 30 minutes before the ceremony starts. This will give you time to find your seat, take in the beautiful setup, and be fully present for our special moment.
                 </p>
               </div>
 
               {/* Gifts Reminder */}
-              <div className="bg-white/50 rounded-lg p-4 sm:p-5 md:p-6 border border-[#E1D5C7]/40 shadow-sm">
-                <h4 className={`${cinzel.className} text-base sm:text-lg md:text-xl font-semibold text-[#606C60] mb-2 sm:mb-3`}>
+              <div className="bg-white/10 rounded-lg p-4 sm:p-5 md:p-6 border border-white/25 shadow-sm">
+                <h4 className={`${cinzel.className} text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3`}>
                   GIFTS
                 </h4>
-                <p className={`${cormorant.className} text-sm sm:text-base md:text-lg text-[#606C60]/90 leading-relaxed`}>
+                <p className={`${cormorant.className} text-sm sm:text-base md:text-lg text-white/90 leading-relaxed`}>
                   Your presence is already the greatest gift, but if you'd like to give something, cash gifts are preferred. This will help us start our new journey together in the most meaningful way.
                 </p>
               </div>

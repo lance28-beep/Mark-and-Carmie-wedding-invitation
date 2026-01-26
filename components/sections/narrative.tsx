@@ -48,7 +48,7 @@ export function Narrative() {
               className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-[#4A2E2E]`}
               style={{ textShadow: "0 2px 10px rgba(255,255,255,0.45)" }}
             >
-              Francis &amp; Monique&apos;s Love Story
+              {siteConfig.couple.groomNickname} &amp; {siteConfig.couple.brideNickname}&apos;s Love Story
             </p>
             <h2
               className="style-script-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#2F1C1C]"

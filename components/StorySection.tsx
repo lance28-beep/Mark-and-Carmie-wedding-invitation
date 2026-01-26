@@ -34,8 +34,8 @@ export const StorySection: React.FC<StorySectionProps> = ({
   isLast = false
 }) => {
   const isDark = theme === 'dark';
-  const bgColor = isDark ? 'bg-[#606C60]' : 'bg-[#E1D5C7] relative z-10';
-  const textColor = isDark ? 'text-[#E1D5C7]' : 'text-[#606C60]';
+  const bgColor = isDark ? 'bg-[#95B2A0]' : 'bg-[#BA94C3] relative z-10';
+  const textColor = 'text-white';
   
   // Animation Hook
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -74,11 +74,11 @@ export const StorySection: React.FC<StorySectionProps> = ({
       {!isDark && (
         <>
           {/* Top Tear */}
-          <div className="absolute top-0 left-0 w-full -mt-[8px] md:-mt-[20px] z-20 text-[#E1D5C7] pointer-events-none">
+          <div className="absolute top-0 left-0 w-full -mt-[8px] md:-mt-[20px] z-20 text-[#BA94C3] pointer-events-none">
              <TornPaperEdge flipped={true} />
           </div>
           {/* Bottom Tear */}
-          <div className="absolute bottom-0 left-0 w-full -mb-[8px] md:-mb-[20px] z-20 text-[#E1D5C7] pointer-events-none">
+          <div className="absolute bottom-0 left-0 w-full -mb-[8px] md:-mb-[20px] z-20 text-[#BA94C3] pointer-events-none">
              <TornPaperEdge flipped={false} />
           </div>
         </>
@@ -120,7 +120,7 @@ export const StorySection: React.FC<StorySectionProps> = ({
               <h2 className={`${cinzel.className} text-2xl md:text-6xl mb-2 md:mb-6 tracking-wide leading-none
                 transition-all duration-1000 delay-500
                 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
-                ${isDark ? 'text-[#E1D5C7]' : 'text-[#606C60]'}
+                text-white
               `}>
                 {title}
               </h2>

@@ -145,7 +145,7 @@ export function BookOfGuests() {
     >
       {/* Background */}
       <div 
-        className="absolute inset-0 -z-10 bg-[#606C60]"
+        className="absolute inset-0 -z-10 bg-[#95B2A0]"
       />
       
       {/* Flower decoration - top left corner */}
@@ -157,7 +157,6 @@ export function BookOfGuests() {
           height={300}
           className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-y-[-1]"
           priority={false}
-          style={{ filter: 'brightness(0) saturate(100%) invert(88%) sepia(8%) saturate(800%) hue-rotate(10deg) brightness(105%) contrast(90%)' }}
         />
       </div>
       
@@ -170,7 +169,6 @@ export function BookOfGuests() {
           height={300}
           className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-x-[-1] scale-y-[-1]"
           priority={false}
-          style={{ filter: 'brightness(0) saturate(100%) invert(88%) sepia(8%) saturate(800%) hue-rotate(10deg) brightness(105%) contrast(90%)' }}
         />
       </div>
       
@@ -183,7 +181,6 @@ export function BookOfGuests() {
           height={300}
           className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60"
           priority={false}
-          style={{ filter: 'brightness(0) saturate(100%) invert(88%) sepia(8%) saturate(800%) hue-rotate(10deg) brightness(105%) contrast(90%)' }}
         />
       </div>
       
@@ -196,7 +193,6 @@ export function BookOfGuests() {
           height={300}
           className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-x-[-1]"
           priority={false}
-          style={{ filter: 'brightness(0) saturate(100%) invert(88%) sepia(8%) saturate(800%) hue-rotate(10deg) brightness(105%) contrast(90%)' }}
         />
       </div>
 
@@ -204,28 +200,28 @@ export function BookOfGuests() {
       <div className="relative z-10 text-center mb-3 sm:mb-4 md:mb-6 px-2 sm:px-3 md:px-4">
         {/* Small label */}
         <p
-          className={`${cormorant.className} text-[0.6rem] sm:text-[0.7rem] md:text-xs uppercase tracking-[0.25em] text-[#E1D5C7] mb-1 sm:mb-1.5`}
+          className={`${cormorant.className} text-[0.6rem] sm:text-[0.7rem] md:text-xs uppercase tracking-[0.25em] text-white mb-1 sm:mb-1.5`}
         >
           Our Cherished Guests
         </p>
 
         <h2
-          className={`${cinzel.className} text-xl sm:text-3xl md:text-4xl lg:text-5xl text-[#E1D5C7] mb-1 sm:mb-2 md:mb-3`}
+          className={`${cinzel.className} text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-1 sm:mb-2 md:mb-3`}
         >
           Book of Guests
         </h2>
 
-        <p className={`${cormorant.className} text-[10px] sm:text-xs md:text-sm text-[#E1D5C7] font-light max-w-lg mx-auto leading-relaxed px-2`}>
+        <p className={`${cormorant.className} text-[10px] sm:text-xs md:text-sm text-white font-light max-w-lg mx-auto leading-relaxed px-2`}>
           Meet the cherished souls joining us in celebration — your presence makes our day truly special
         </p>
 
         {/* Decorative element */}
         <div className="flex items-center justify-center gap-1 sm:gap-1.5 mt-1.5 sm:mt-2.5 md:mt-3">
-          <div className="w-6 sm:w-10 md:w-12 h-px bg-gradient-to-r from-transparent via-[#E1D5C7]/80 to-transparent" />
-          <div className="w-0.5 h-0.5 sm:w-1 sm:h-1 bg-[#E1D5C7]/80 rounded-full" />
-          <div className="w-0.5 h-0.5 sm:w-1 sm:h-1 bg-[#E1D5C7]/60 rounded-full" />
-          <div className="w-0.5 h-0.5 sm:w-1 sm:h-1 bg-[#E1D5C7]/80 rounded-full" />
-          <div className="w-6 sm:w-10 md:w-12 h-px bg-gradient-to-l from-transparent via-[#E1D5C7]/80 to-transparent" />
+          <div className="w-6 sm:w-10 md:w-12 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+          <div className="w-0.5 h-0.5 sm:w-1 sm:h-1 bg-white/80 rounded-full" />
+          <div className="w-0.5 h-0.5 sm:w-1 sm:h-1 bg-white/60 rounded-full" />
+          <div className="w-0.5 h-0.5 sm:w-1 sm:h-1 bg-white/80 rounded-full" />
+          <div className="w-6 sm:w-10 md:w-12 h-px bg-gradient-to-l from-transparent via-white/80 to-transparent" />
         </div>
       </div>
 
@@ -234,40 +230,40 @@ export function BookOfGuests() {
         {/* Stats card - Simplified */}
         <div className="text-center mb-2.5 sm:mb-4 md:mb-6 px-2 sm:px-4 md:px-6">
           <div className="relative max-w-3xl mx-auto">
-            <div className="relative bg-[#E1D5C7]/95 backdrop-blur-md border border-[#606C60]/40 rounded-lg sm:rounded-xl p-3 sm:p-5 md:p-6 shadow-md">
+            <div className="relative bg-[#BA94C3]/90 backdrop-blur-md border border-white/30 rounded-lg sm:rounded-xl p-3 sm:p-5 md:p-6 shadow-md">
               
               {/* Refresh button */}
               <button
                 onClick={() => fetchGuests(true)}
                 disabled={isRefreshing}
-                className="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 p-1 sm:p-1.5 rounded-full bg-[#606C60]/10 hover:bg-[#606C60]/20 transition-all duration-300 disabled:opacity-50 group z-10"
+                className="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 p-1 sm:p-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 disabled:opacity-50 group z-10"
                 title="Refresh counts"
               >
-                <RefreshCw className={`h-3 w-3 sm:h-3.5 sm:w-3.5 text-[#606C60] transition-transform ${isRefreshing ? 'animate-spin' : 'group-hover:rotate-180'} duration-500`} />
+                <RefreshCw className={`h-3 w-3 sm:h-3.5 sm:w-3.5 text-white transition-transform ${isRefreshing ? 'animate-spin' : 'group-hover:rotate-180'} duration-500`} />
               </button>
 
               {/* Main Count with inline text */}
               <div className="mb-1.5 sm:mb-2.5">
                 <div className="flex items-center justify-center gap-1.5 sm:gap-2 flex-wrap">
-                  <h3 className={`${cinzel.className} text-xl sm:text-3xl md:text-4xl font-bold text-[#606C60] transition-all duration-500 ${showIncrease ? 'scale-110 text-[#606C60]' : ''}`}>
+                  <h3 className={`${cinzel.className} text-xl sm:text-3xl md:text-4xl font-bold text-white transition-all duration-500 ${showIncrease ? 'scale-110 text-white' : ''}`}>
                     {totalGuests}
                   </h3>
                   {showIncrease && (
-                    <TrendingUp className="h-3.5 w-3.5 sm:h-5 sm:w-5 text-[#606C60] animate-bounce" />
+                    <TrendingUp className="h-3.5 w-3.5 sm:h-5 sm:w-5 text-white animate-bounce" />
                   )}
-                  <p className={`${cormorant.className} text-sm sm:text-lg md:text-xl text-[#606C60] font-medium leading-tight`}>
+                  <p className={`${cormorant.className} text-sm sm:text-lg md:text-xl text-white font-medium leading-tight`}>
                     {totalGuests === 1 ? "Guest" : "Guests"} Celebrating With Us
                   </p>
                 </div>
               </div>
 
               {/* RSVP Count */}
-              <p className={`${cormorant.className} text-xs sm:text-base text-[#606C60]/90 mb-2 sm:mb-3`}>
+              <p className={`${cormorant.className} text-xs sm:text-base text-white/90 mb-2 sm:mb-3`}>
                 {rsvpCount} {rsvpCount === 1 ? "RSVP entry" : "RSVP entries"}
               </p>
               
               {/* Message */}
-              <p className={`${cormorant.className} text-[10px] sm:text-xs md:text-sm text-[#606C60]/90 leading-tight`}>
+              <p className={`${cormorant.className} text-[10px] sm:text-xs md:text-sm text-white/90 leading-tight`}>
                 Thank you for confirming your RSVP! Your presence means the world to us.
               </p>
             </div>
@@ -281,13 +277,13 @@ export function BookOfGuests() {
               {(showAllGuests ? confirmedGuests : confirmedGuests.slice(0, 5)).map((guest) => (
                 <div
                   key={guest.id}
-                  className="relative group bg-[#E1D5C7] rounded-lg sm:rounded-xl md:rounded-2xl p-2.5 sm:p-4 md:p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-[#606C60]/30 hover:border-[#606C60]/60"
+                  className="relative group bg-[#BA94C3]/90 rounded-lg sm:rounded-xl md:rounded-2xl p-2.5 sm:p-4 md:p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-white/30 hover:border-white/60"
                 >
                   {/* Guest Header */}
                   <div className="flex items-start gap-2 sm:gap-3 md:gap-4 mb-2 sm:mb-2.5 md:mb-3">
                     {/* Avatar - Mobile Optimized */}
                     <div className="relative flex-shrink-0">
-                      <div className="w-9 h-9 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-[#606C60] flex items-center justify-center shadow-md ring-2 ring-white/50">
+                      <div className="w-9 h-9 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 flex items-center justify-center shadow-md ring-2 ring-white/50">
                         <span className="text-white font-semibold text-xs sm:text-base md:text-lg">
                           {getInitials(guest.name)}
                         </span>
@@ -305,11 +301,11 @@ export function BookOfGuests() {
                     {/* Guest Info - Mobile Optimized */}
                     <div className="flex-1 min-w-0">
                       <div className="mb-1 sm:mb-1.5">
-                        <h3 className={`${cinzel.className} text-xs sm:text-base md:text-lg font-semibold sm:font-bold text-[#606C60] leading-tight mb-0.5`}>
+                        <h3 className={`${cinzel.className} text-xs sm:text-base md:text-lg font-semibold sm:font-bold text-white leading-tight mb-0.5`}>
                           {guest.name}
                         </h3>
                         {guest.role && (
-                          <p className={`${cormorant.className} text-[9px] sm:text-[10px] md:text-xs text-[#606C60]/80 font-medium`}>
+                          <p className={`${cormorant.className} text-[9px] sm:text-[10px] md:text-xs text-white/80 font-medium`}>
                             {guest.role}
                           </p>
                         )}
@@ -317,8 +313,8 @@ export function BookOfGuests() {
 
                       {/* Email - Mobile Optimized */}
                       {guest.email && (
-                        <div className="flex items-center gap-1 text-[9px] sm:text-[10px] md:text-xs text-[#606C60]/70 mb-1.5 sm:mb-2 md:mb-3">
-                          <Mail className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-[#606C60]/60 flex-shrink-0" />
+                        <div className="flex items-center gap-1 text-[9px] sm:text-[10px] md:text-xs text-white/70 mb-1.5 sm:mb-2 md:mb-3">
+                          <Mail className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-white/60 flex-shrink-0" />
                           <span className="truncate">{guest.email}</span>
                         </div>
                       )}
@@ -326,21 +322,21 @@ export function BookOfGuests() {
                       {/* Info Badges - Mobile Optimized */}
                       <div className="flex flex-wrap items-center gap-1 sm:gap-1.5 md:gap-2 mb-1.5 sm:mb-2 md:mb-3">
                         {/* Guest count badge */}
-                        <div className="flex items-center gap-0.5 sm:gap-1 px-1.5 sm:px-2 md:px-2.5 py-0.5 sm:py-1 bg-[#606C60]/10 border border-[#606C60]/30 rounded sm:rounded-md md:rounded-lg">
-                          <Users className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-3.5 md:w-3.5 text-[#606C60]" />
-                          <span className={`${cormorant.className} text-[9px] sm:text-[10px] md:text-xs font-semibold text-[#606C60]`}>
+                        <div className="flex items-center gap-0.5 sm:gap-1 px-1.5 sm:px-2 md:px-2.5 py-0.5 sm:py-1 bg-white/10 border border-white/30 rounded sm:rounded-md md:rounded-lg">
+                          <Users className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-3.5 md:w-3.5 text-white" />
+                          <span className={`${cormorant.className} text-[9px] sm:text-[10px] md:text-xs font-semibold text-white`}>
                             {guest.allowedGuests} {guest.allowedGuests === 1 ? 'Guest' : 'Guests'}
                           </span>
                         </div>
 
                         {/* Table badge */}
-                        <div className="flex items-center gap-0.5 sm:gap-1 px-1.5 sm:px-2 md:px-2.5 py-0.5 sm:py-1 bg-[#606C60]/10 border border-[#606C60]/40 sm:border-2 rounded sm:rounded-md md:rounded-lg">
-                          <MapPin className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-3.5 md:w-3.5 text-[#606C60]" />
-                          <span className={`${cormorant.className} text-[9px] sm:text-[10px] md:text-xs font-semibold sm:font-bold text-[#606C60]`}>
+                        <div className="flex items-center gap-0.5 sm:gap-1 px-1.5 sm:px-2 md:px-2.5 py-0.5 sm:py-1 bg-white/10 border border-white/40 sm:border-2 rounded sm:rounded-md md:rounded-lg">
+                          <MapPin className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-3.5 md:w-3.5 text-white" />
+                          <span className={`${cormorant.className} text-[9px] sm:text-[10px] md:text-xs font-semibold sm:font-bold text-white`}>
                             {guest.tableNumber && guest.tableNumber.trim() !== "" ? (
                               <>Table {guest.tableNumber}</>
                             ) : (
-                              <span className="text-[#606C60]/60 font-medium">Not Assigned</span>
+                              <span className="text-white/60 font-medium">Not Assigned</span>
                             )}
                           </span>
                         </div>
@@ -348,28 +344,28 @@ export function BookOfGuests() {
 
                       {/* Message - Mobile Optimized */}
                       {guest.message && guest.message.trim() !== "" && (
-                        <div className="relative mb-1.5 sm:mb-2.5 md:mb-3 p-2 sm:p-3 md:p-5 bg-white rounded sm:rounded-lg md:rounded-2xl border border-[#606C60]/30 shadow-sm overflow-hidden">
+                        <div className="relative mb-1.5 sm:mb-2.5 md:mb-3 p-2 sm:p-3 md:p-5 bg-white/10 rounded sm:rounded-lg md:rounded-2xl border border-white/30 shadow-sm overflow-hidden">
                           {/* Decorative corner elements - smaller on mobile */}
                           <div className="absolute top-0 left-0 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 opacity-[0.08]">
-                            <svg viewBox="0 0 100 100" className="text-[#606C60]" fill="currentColor">
+                            <svg viewBox="0 0 100 100" className="text-white" fill="currentColor">
                               <path d="M0,0 L100,0 L0,100 Z" />
                             </svg>
                           </div>
                           <div className="absolute bottom-0 right-0 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 opacity-[0.08]">
-                            <svg viewBox="0 0 100 100" className="text-[#606C60]" fill="currentColor">
+                            <svg viewBox="0 0 100 100" className="text-white" fill="currentColor">
                               <path d="M100,100 L0,100 L100,0 Z" />
                             </svg>
                           </div>
                           
                           {/* Opening quote - smaller on mobile */}
-                          <div className="absolute top-1 left-1 sm:top-1.5 sm:left-1.5 md:top-2 md:left-2 text-[#606C60]/25">
+                          <div className="absolute top-1 left-1 sm:top-1.5 sm:left-1.5 md:top-2 md:left-2 text-white/25">
                             <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
                             </svg>
                           </div>
                           
                           {/* Closing quote - smaller on mobile */}
-                          <div className="absolute bottom-1 right-1 sm:bottom-1.5 sm:right-1.5 md:bottom-2 md:right-2 text-[#606C60]/25">
+                          <div className="absolute bottom-1 right-1 sm:bottom-1.5 sm:right-1.5 md:bottom-2 md:right-2 text-white/25">
                             <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M18 7h-3l-2 4v6h6v-6h-3zm-8 0H7l-2 4v6h6v-6h-3z" />
                             </svg>
@@ -377,29 +373,29 @@ export function BookOfGuests() {
 
                           {/* Message content */}
                           <div className="relative px-0.5 sm:px-1">
-                            <p className={`${cormorant.className} text-[10px] sm:text-xs md:text-base text-[#606C60] leading-tight sm:leading-relaxed italic font-medium`}>
+                            <p className={`${cormorant.className} text-[10px] sm:text-xs md:text-base text-white leading-tight sm:leading-relaxed italic font-medium`}>
                               {guest.message}
                             </p>
                           </div>
 
                           {/* Elegant border accent - smaller on mobile */}
-                          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 sm:w-0.5 md:w-1 h-8 sm:h-12 md:h-16 bg-gradient-to-b from-transparent via-[#606C60] to-transparent rounded-r-full" />
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 sm:w-0.5 md:w-1 h-8 sm:h-12 md:h-16 bg-gradient-to-b from-transparent via-white to-transparent rounded-r-full" />
                         </div>
                       )}
 
                       {/* Companions - Mobile Optimized */}
                       {guest.companions && guest.companions.length > 0 && (
-                        <div className="pt-1.5 sm:pt-2 md:pt-2.5 border-t border-[#606C60]/20">
+                        <div className="pt-1.5 sm:pt-2 md:pt-2.5 border-t border-white/20">
                           <div className="flex items-center gap-1 mb-1 sm:mb-1.5">
-                            <Users className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-3.5 md:w-3.5 text-[#606C60]" />
-                            <span className={`${cormorant.className} text-[9px] sm:text-[10px] md:text-xs font-semibold text-[#606C60]`}>Companions</span>
+                            <Users className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-3.5 md:w-3.5 text-white" />
+                            <span className={`${cormorant.className} text-[9px] sm:text-[10px] md:text-xs font-semibold text-white`}>Companions</span>
                           </div>
                           <div className="flex flex-wrap gap-1 sm:gap-1.5">
                             {guest.companions.map((companion, idx) => (
-                              <div key={idx} className="inline-flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2 md:px-2.5 py-0.5 sm:py-1 bg-white border border-[#606C60]/30 rounded sm:rounded-md md:rounded-lg hover:border-[#606C60]/50 transition-colors">
-                                <span className={`${cormorant.className} text-[9px] sm:text-[10px] md:text-xs font-medium text-[#606C60] whitespace-nowrap`}>{companion.name}</span>
+                              <div key={idx} className="inline-flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2 md:px-2.5 py-0.5 sm:py-1 bg-white/10 border border-white/30 rounded sm:rounded-md md:rounded-lg hover:border-white/50 transition-colors">
+                                <span className={`${cormorant.className} text-[9px] sm:text-[10px] md:text-xs font-medium text-white whitespace-nowrap`}>{companion.name}</span>
                                 {companion.relationship && companion.relationship.trim() !== "" && (
-                                  <span className={`${cormorant.className} text-[8px] sm:text-[9px] md:text-[10px] text-[#606C60] bg-[#606C60]/10 px-1.5 sm:px-2 py-0.5 rounded-full font-medium border border-[#606C60]/20 whitespace-nowrap`}>
+                                  <span className={`${cormorant.className} text-[8px] sm:text-[9px] md:text-[10px] text-white bg-white/10 px-1.5 sm:px-2 py-0.5 rounded-full font-medium border border-white/20 whitespace-nowrap`}>
                                     {companion.relationship}
                                   </span>
                                 )}
@@ -410,9 +406,9 @@ export function BookOfGuests() {
                       )}
 
                       {/* Footer - Mobile Optimized */}
-                      <div className="flex items-center gap-1 pt-1.5 sm:pt-2 md:pt-2.5 mt-1.5 sm:mt-2 md:mt-2.5 border-t border-[#606C60]/20">
-                        <Calendar className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-[#606C60]/60" />
-                        <span className={`${cormorant.className} text-[8px] sm:text-[9px] md:text-[10px] text-[#606C60]/70`}>
+                      <div className="flex items-center gap-1 pt-1.5 sm:pt-2 md:pt-2.5 mt-1.5 sm:mt-2 md:mt-2.5 border-t border-white/20">
+                        <Calendar className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-white/60" />
+                        <span className={`${cormorant.className} text-[8px] sm:text-[9px] md:text-[10px] text-white/70`}>
                           Confirmed {formatDate(guest.updatedAt)}
                         </span>
                       </div>
@@ -427,7 +423,7 @@ export function BookOfGuests() {
               <div className="flex justify-center mt-4 sm:mt-6 md:mt-8">
                 <button
                   onClick={() => setShowAllGuests(true)}
-                  className={`${cormorant.className} px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-4 bg-[#E1D5C7]/95 backdrop-blur-md border-2 border-[#606C60]/40 rounded-lg sm:rounded-xl text-[#606C60] font-semibold text-sm sm:text-base md:text-lg hover:bg-[#606C60] hover:text-white hover:border-[#606C60] transition-all duration-300 shadow-md hover:shadow-lg`}
+                  className={`${cormorant.className} px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-4 bg-[#95B2A0] backdrop-blur-md border-2 border-white/30 rounded-lg sm:rounded-xl text-white font-semibold text-sm sm:text-base md:text-lg hover:bg-[#7a9685] hover:border-white/50 transition-all duration-300 shadow-md hover:shadow-lg`}
                 >
                   View More ({confirmedGuests.length - 5} more)
                 </button>
