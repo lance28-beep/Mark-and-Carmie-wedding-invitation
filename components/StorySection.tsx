@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Cinzel, Cormorant_Garamond } from "next/font/google";
 
-import { TornPaperEdge } from './TornPaperEdge';
-
 const cinzel = Cinzel({
   subsets: ["latin"],
   weight: "400",
@@ -33,10 +31,10 @@ export const StorySection: React.FC<StorySectionProps> = ({
   isFirst = false,
   isLast = false
 }) => {
-  const isDark = theme === 'dark';
-  const bgColor = isDark ? 'bg-[#95B2A0]' : 'bg-[#BA94C3] relative z-10';
-  const textColor = 'text-white';
-  
+  // Same style as gallery section: transparent so parent bg shows, gallery palette
+  const textColor = 'text-[#5b3c8a]';
+  const imageFrameClass = 'rounded-lg sm:rounded-xl bg-white/60 backdrop-blur-lg border border-[#c9b2ff]/60 shadow-[0_10px_26px_rgba(91,60,138,0.24)] overflow-hidden';
+
   // Animation Hook
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -54,11 +52,6 @@ export const StorySection: React.FC<StorySectionProps> = ({
     return () => observer.disconnect();
   }, []);
 
-  // Visual Styles
-  const imageFrameClass = isDark 
-    ? 'bg-white p-1.5 md:p-3 shadow-lg' 
-    : 'bg-white p-1.5 md:p-3 shadow-md';
-
   // Rotation
   const rotation = layout === 'image-left' ? 'rotate-1 md:rotate-2' : '-rotate-1 md:-rotate-2';
 
@@ -68,21 +61,7 @@ export const StorySection: React.FC<StorySectionProps> = ({
   const textAlignment = layout === 'image-left' ? 'text-left' : 'text-left md:text-right'; // Keep text left aligned usually looks better in tight columns, or alternate
 
   return (
-    <div className={`${bgColor} relative`}>
-      
-      {/* Torn Edges (Only on Light Section) */}
-      {!isDark && (
-        <>
-          {/* Top Tear */}
-          <div className="absolute top-0 left-0 w-full -mt-[8px] md:-mt-[20px] z-20 text-[#BA94C3] pointer-events-none">
-             <TornPaperEdge flipped={true} />
-          </div>
-          {/* Bottom Tear */}
-          <div className="absolute bottom-0 left-0 w-full -mb-[8px] md:-mb-[20px] z-20 text-[#BA94C3] pointer-events-none">
-             <TornPaperEdge flipped={false} />
-          </div>
-        </>
-      )}
+    <div className="relative">
       <div 
         ref={sectionRef}
         className={`container mx-auto px-2 md:px-12 py-12 md:py-32 relative z-10 transition-all duration-1000 ease-out transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
@@ -109,7 +88,6 @@ export const StorySection: React.FC<StorySectionProps> = ({
                      quality={90}
                      priority={false}
                    />
-                   {isDark && <div className="absolute inset-0 bg-black/5 mix-blend-multiply pointer-events-none z-10" />}
                  </div>
                </div>
             </div>
@@ -120,7 +98,7 @@ export const StorySection: React.FC<StorySectionProps> = ({
               <h2 className={`${cinzel.className} text-2xl md:text-6xl mb-2 md:mb-6 tracking-wide leading-none
                 transition-all duration-1000 delay-500
                 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
-                text-white
+                text-[#5b3c8a]
               `}>
                 {title}
               </h2>

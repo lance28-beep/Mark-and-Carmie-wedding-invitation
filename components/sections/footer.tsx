@@ -106,55 +106,55 @@ export function Footer() {
     <footer 
       className="relative z-20 mt-12 sm:mt-16 overflow-hidden"
     >
-      {/* Background */}
+      {/* Background - sage to match book-of-guests / snap-share */}
       <div 
-        className="absolute inset-0 -z-10 bg-[#95B2A0]"
+        className="absolute inset-0 -z-10 bg-[#B3CEAF]"
       />
       
-      {/* Flower decoration - top left corner */}
+      {/* Flower decoration - top left corner (original colors) */}
       <div className="absolute left-0 top-0 z-0 pointer-events-none">
         <Image
           src="/decoration/flower-decoration-left-bottom-corner2.png"
           alt="Flower decoration"
           width={300}
           height={300}
-          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-y-[-1]"
+          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-70 scale-y-[-1]"
           priority={false}
         />
       </div>
       
-      {/* Flower decoration - top right corner */}
+      {/* Flower decoration - top right corner (original colors) */}
       <div className="absolute right-0 top-0 z-0 pointer-events-none">
         <Image
           src="/decoration/flower-decoration-left-bottom-corner2.png"
           alt="Flower decoration"
           width={300}
           height={300}
-          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-x-[-1] scale-y-[-1]"
+          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-70 scale-x-[-1] scale-y-[-1]"
           priority={false}
         />
       </div>
       
-      {/* Flower decoration - left bottom corner */}
+      {/* Flower decoration - left bottom corner (original colors) */}
       <div className="absolute left-0 bottom-0 z-0 pointer-events-none">
         <Image
           src="/decoration/flower-decoration-left-bottom-corner2.png"
           alt="Flower decoration"
           width={300}
           height={300}
-          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60"
+          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-70"
           priority={false}
         />
       </div>
       
-      {/* Flower decoration - right bottom corner */}
+      {/* Flower decoration - right bottom corner (original colors) */}
       <div className="absolute right-0 bottom-0 z-0 pointer-events-none">
         <Image
           src="/decoration/flower-decoration-left-bottom-corner2.png"
           alt="Flower decoration"
           width={300}
           height={300}
-          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-x-[-1]"
+          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-70 scale-x-[-1]"
           priority={false}
         />
       </div>
@@ -224,7 +224,7 @@ export function Footer() {
               </div>
             </div>
 
-            <motion.div className="bg-[#BA94C3]/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-white/30 shadow-[0_18px_45px_rgba(0,0,0,0.15)]" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
+            <motion.div className="bg-[#9ab896]/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-white/30 shadow-[0_18px_45px_rgba(0,0,0,0.15)]" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
               <blockquote className={`${cormorant.className} text-white italic text-sm sm:text-base md:text-lg leading-relaxed min-h-[60px] sm:min-h-[70px] md:min-h-[80px]`}>
                 "{displayedText}
                 <span className="inline-block w-0.5 h-4 sm:h-5 md:h-6 bg-white ml-1 animate-pulse">|</span>"
@@ -239,7 +239,7 @@ export function Footer() {
 
           {/* Event Details quick tiles */}
           <motion.div className="space-y-3 sm:space-y-4 md:space-y-5" variants={fadeInUp}>
-            <motion.div className="bg-[#BA94C3]/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 border border-white/30 hover:bg-[#BA94C3] transition-all duration-300 shadow-[0_14px_40px_rgba(0,0,0,0.15)]" whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+            <motion.div className="bg-[#9ab896]/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 border border-white/30 hover:bg-[#9ab896] transition-all duration-300 shadow-[0_14px_40px_rgba(0,0,0,0.15)]" whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
               <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3 mb-2.5 sm:mb-3 md:mb-4">
                 <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-white/10 rounded-full flex items-center justify-center border border-white/30 flex-shrink-0">
                   <Clock className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-white" />
@@ -258,7 +258,7 @@ export function Footer() {
               </div>
             </motion.div>
 
-            <motion.div className="bg-[#BA94C3]/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 border border-white/30 hover:bg-[#BA94C3] transition-all duration-300 shadow-[0_14px_40px_rgba(0,0,0,0.15)]" whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+            <motion.div className="bg-[#9ab896]/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 border border-white/30 hover:bg-[#9ab896] transition-all duration-300 shadow-[0_14px_40px_rgba(0,0,0,0.15)]" whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
               <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3 mb-2.5 sm:mb-3 md:mb-4">
                 <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-white/10 rounded-full flex items-center justify-center border border-white/30 flex-shrink-0">
                   <Heart className="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 text-white" fill="white" />

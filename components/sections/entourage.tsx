@@ -164,7 +164,7 @@ export function Entourage() {
       align === "right" ? "text-right" : align === "left" ? "text-left" : "text-center"
     return (
        <h3
-         className={`relative ${cinzel.className} text-xs sm:text-sm md:text-sm lg:text-base font-extrabold uppercase text-white mb-1 sm:mb-1.5 md:mb-2 tracking-[0.14em] sm:tracking-[0.18em] ${textAlign} ${className} transition-all duration-300 whitespace-nowrap`}
+         className={`relative ${cinzel.className} text-xs sm:text-sm md:text-sm lg:text-base font-extrabold uppercase text-[#5b3c8a] mb-1 sm:mb-1.5 md:mb-2 tracking-[0.14em] sm:tracking-[0.18em] ${textAlign} ${className} transition-all duration-300 whitespace-nowrap`}
        >
         {children}
       </h3>
@@ -190,16 +190,16 @@ export function Entourage() {
         className={`relative flex flex-col ${containerAlign} justify-center py-0.5 sm:py-1 md:py-1 leading-snug sm:leading-snug group/item transition-all duration-300 hover:scale-[1.02] sm:hover:scale-[1.03]`}
       >
         {/* Hover highlight effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-md" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#c9b2ff]/40 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-md" />
 
         <p
-          className={`relative text-white text-[11px] sm:text-[13px] md:text-sm lg:text-base font-semibold ${textAlign} group-hover/item:text-white transition-all duration-300`}
+          className={`relative text-[#5b3c8a] text-[11px] sm:text-[13px] md:text-sm lg:text-base font-semibold ${textAlign} group-hover/item:text-[#4a2f76] transition-all duration-300`}
         >
           {member.Name}
         </p>
         {showRole && member.RoleTitle && (
           <p
-            className={`relative text-white/70 text-[9px] sm:text-[10px] md:text-[10px] lg:text-xs font-medium mt-0 leading-tight ${textAlign} tracking-wide uppercase group-hover/item:text-white transition-colors duration-300`}
+            className={`relative text-[#5b3c8a]/80 text-[9px] sm:text-[10px] md:text-[10px] lg:text-xs font-medium mt-0 leading-tight ${textAlign} tracking-wide uppercase group-hover/item:text-[#4a2f76] transition-colors duration-300`}
           >
             {member.RoleTitle}
           </p>
@@ -254,57 +254,57 @@ export function Entourage() {
     <section
       ref={sectionRef}
       id="entourage"
-      className="relative py-8 md:py-10 lg:py-12 overflow-hidden"
+      className="relative pt-16 md:pt-20 lg:pt-24 pb-8 md:pb-10 lg:pb-12 overflow-hidden"
     >
       {/* Background */}
       <div 
-        className="absolute inset-0 -z-10 bg-[#95B2A0]"
+        className="absolute inset-0 -z-10 bg-[#f4ecff]"
       />
       
-      {/* Flower decoration - top left corner */}
+      {/* Flower decoration - top left corner (original colors) */}
       <div className="absolute left-0 top-0 z-0 pointer-events-none">
         <Image
           src="/decoration/flower-decoration-left-bottom-corner2.png"
           alt="Flower decoration"
           width={300}
           height={300}
-          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-y-[-1]"
+          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-70 scale-y-[-1]"
           priority={false}
         />
       </div>
       
-      {/* Flower decoration - top right corner */}
+      {/* Flower decoration - top right corner (original colors) */}
       <div className="absolute right-0 top-0 z-0 pointer-events-none">
         <Image
           src="/decoration/flower-decoration-left-bottom-corner2.png"
           alt="Flower decoration"
           width={300}
           height={300}
-          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-x-[-1] scale-y-[-1]"
+          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-70 scale-x-[-1] scale-y-[-1]"
           priority={false}
         />
       </div>
       
-      {/* Flower decoration - left bottom corner */}
+      {/* Flower decoration - left bottom corner (original colors) */}
       <div className="absolute left-0 bottom-0 z-0 pointer-events-none">
         <Image
           src="/decoration/flower-decoration-left-bottom-corner2.png"
           alt="Flower decoration"
           width={300}
           height={300}
-          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60"
+          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-70"
           priority={false}
         />
       </div>
       
-      {/* Flower decoration - right bottom corner */}
+      {/* Flower decoration - right bottom corner (original colors) */}
       <div className="absolute right-0 bottom-0 z-0 pointer-events-none">
         <Image
           src="/decoration/flower-decoration-left-bottom-corner2.png"
           alt="Flower decoration"
           width={300}
           height={300}
-          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-60 scale-x-[-1]"
+          className="w-auto h-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] opacity-70 scale-x-[-1]"
           priority={false}
         />
       </div>
@@ -313,20 +313,20 @@ export function Entourage() {
       <div className={`relative z-30 text-center mb-4 sm:mb-5 md:mb-6 px-3 sm:px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
         {/* Small label */}
         <p
-          className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-white mb-2`}
+          className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-[#5b3c8a] mb-2`}
         >
           Those who stand with {siteConfig.couple.groomNickname} &amp; {siteConfig.couple.brideNickname}
         </p>
 
         <h2
-          className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-1 sm:mb-2 md:mb-2.5`}
+          className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#5b3c8a] mb-1 sm:mb-2 md:mb-2.5`}
         >
           Wedding Entourage
         </h2>
 
         {/* Sublabel */}
         <p
-          className={`${cormorant.className} text-xs sm:text-sm md:text-base text-white mb-2 sm:mb-2.5 md:mb-3 italic`}
+          className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#5b3c8a] mb-2 sm:mb-2.5 md:mb-3 italic`}
         >
           Honoring those who share in our joy
         </p>
@@ -339,7 +339,7 @@ export function Entourage() {
         }`}
       >
         {/* Card with new theme */}
-        <div className="relative bg-[#BA94C3]/90 backdrop-blur-lg rounded-xl sm:rounded-2xl overflow-hidden border border-white/30 shadow-[0_18px_40px_rgba(0,0,0,0.15)] transition-all duration-500 group">
+        <div className="relative bg-white/80 backdrop-blur-2xl rounded-xl sm:rounded-2xl overflow-hidden border border-[#c9b2ff]/70 shadow-[0_18px_48px_rgba(91,60,138,0.25)] transition-all duration-500 group">
           {/* Card content */}
           <div className="relative p-3 sm:p-4 md:p-5 z-10">
             {isLoading ? (

@@ -14,19 +14,19 @@ export default function GalleryLayout({ children }: { children: React.ReactNode 
   }, [])
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#f4ecff]">
       {/* Simple top bar with only Back link */}
-      <div className="sticky top-0 z-50 backdrop-blur-md bg-[#E1D5C7]/95 border-b border-[#606C60]/40 shadow-sm">
+      <div className="sticky top-0 z-50 backdrop-blur-md bg-[#f4ecff]/95 border-b border-[#c9b2ff]/60 shadow-sm">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-12 sm:h-14 flex items-center justify-between">
           <Link
-            href="/"
-            className="inline-flex items-center gap-1.5 sm:gap-2 text-[#606C60] font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border-2 border-[#606C60] bg-[#606C60] hover:bg-[#4d5650] hover:border-[#4d5650] transition-all duration-200 font-sans text-sm sm:text-base"
+            href="/#gallery"
+            className="inline-flex items-center gap-1.5 sm:gap-2 font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border-2 border-[#9db89a] bg-[#B3CEAF] hover:bg-[#9db89a] hover:border-[#8aa886] transition-all duration-200 font-sans text-sm sm:text-base text-[#2d3b2c]"
           >
-            <span className="text-base sm:text-lg text-[#E1D5C7]">←</span>
-            <span className="hidden xs:inline text-[#E1D5C7]">Back to main page</span>
-            <span className="xs:hidden text-[#E1D5C7]">Back</span>
+            <span className="text-base sm:text-lg">←</span>
+            <span className="hidden xs:inline">Back to main page</span>
+            <span className="xs:hidden">Back</span>
           </Link>
-          <div className="text-xs sm:text-sm text-[#606C60]/70 font-sans font-medium">Gallery</div>
+          <div className="text-xs sm:text-sm text-[#5b3c8a]/70 font-sans font-medium">Gallery</div>
         </div>
       </div>
       {children}
