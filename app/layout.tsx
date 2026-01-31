@@ -6,10 +6,10 @@ import "./globals.css"
 import { siteConfig } from "@/content/site"
 import { AudioLayout } from "@/components/providers/audio-layout"
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://francis-and-monique-wedding-invitat.vercel.app/"
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://mark-and-carmie-wedding-invitation.vercel.app/"
 const canonicalUrl = siteUrl.replace(/\/$/, "")
-const desktopHero = "/Details/newLinkPreview.jpg"
-const mobileHero = "/Details/newLinkPreview.jpg"
+const desktopHero = "/Details/newLinkPreview2.jpg"
+const mobileHero = "/Details/newLinkPreview2.jpg"
 const eventImageUrl = `${canonicalUrl}${desktopHero}`
 
 const coupleNames = `${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname}`
