@@ -36,7 +36,6 @@ const ROLE_CATEGORY_ORDER = [
   "Parents of the Bride",
   "Family of the Groom",
   "Family of the Bride",
-  "Matron of Honor",
   "Best Man",
   "Maid of Honor",
   "Candle Sponsors",
@@ -370,8 +369,16 @@ export function Entourage() {
             <>
               {ROLE_CATEGORY_ORDER.map((category, categoryIndex) => {
                 const members = grouped[category] || []
-                
-                if (members.length === 0) return null
+                const isGroomsmenOrBridesmaids = category === "Groomsmen" || category === "Bridesmaids"
+                const otherCount = category === "Groomsmen" ? (grouped["Bridesmaids"] || []).length : (grouped["Groomsmen"] || []).length
+                const isBestManOrMaid = category === "Best Man" || category === "Maid of Honor"
+                const otherHonorCount = category === "Best Man"
+                  ? [...(grouped["Maid of Honor"] || []), ...(grouped["Matron of Honor"] || [])].length
+                  : (grouped["Best Man"] || []).length
+                const skipEmpty = members.length === 0 &&
+                  (!isGroomsmenOrBridesmaids || otherCount === 0) &&
+                  (!isBestManOrMaid || otherHonorCount === 0)
+                if (skipEmpty) return null
 
                 // Special handling for The Couple - display Bride and Groom side by side
                 if (category === "The Couple") {
@@ -542,14 +549,15 @@ export function Entourage() {
                   return null
                 }
 
-                // Special handling for Maid/Matron of Honor and Best Man - combine into single two-column layout
-                if (category === "Matron of Honor" || category === "Maid of Honor" || category === "Best Man") {
-                  // Get both honor attendant groups - combine Maid and Matron of Honor
+                // Special handling for Maid of Honor and Best Man - combine into single two-column layout (Best Man left, Maid of Honor right)
+                if (category === "Maid of Honor" || category === "Best Man") {
+                  // Get both honor attendant groups - include legacy "Matron of Honor" under Maid of Honor
                   const maidOfHonor = [...(grouped["Maid of Honor"] || []), ...(grouped["Matron of Honor"] || [])]
                   const bestMan = grouped["Best Man"] || []
+                  const hasAnyHonor = bestMan.length > 0 || maidOfHonor.length > 0
                   
-                  // Only render once (when processing "Best Man")
-                  if (category === "Best Man") {
+                  // Only render once (when processing "Best Man") and only if at least one has members
+                  if (category === "Best Man" && hasAnyHonor) {
                     return (
                       <div key="HonorAttendants">
                         {categoryIndex > 0 && (
@@ -557,19 +565,19 @@ export function Entourage() {
                             <div className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
                           </div>
                         )}
-                        <TwoColumnLayout leftTitle="Matron of Honor" rightTitle="Best Man">
+                        <TwoColumnLayout leftTitle="Best Man" rightTitle="Maid of Honor">
                           {(() => {
                             const maxLen = Math.max(bestMan.length, maidOfHonor.length)
                             const rows = []
                             for (let i = 0; i < maxLen; i++) {
-                              const left = maidOfHonor[i]
-                              const right = bestMan[i]
+                              const left = bestMan[i]
+                              const right = maidOfHonor[i]
                               rows.push(
                                 <React.Fragment key={`honor-row-${i}`}>
-                                  <div key={`maid-cell-${i}`} className="px-1.5 sm:px-2 md:px-2.5">
+                                  <div key={`bestman-cell-${i}`} className="px-1.5 sm:px-2 md:px-2.5">
                                     {left ? <NameItem member={left} align="right" /> : <div className="py-0.5" />}
                                   </div>
-                                  <div key={`bestman-cell-${i}`} className="px-1.5 sm:px-2 md:px-2.5">
+                                  <div key={`maid-cell-${i}`} className="px-1.5 sm:px-2 md:px-2.5">
                                     {right ? <NameItem member={right} align="left" /> : <div className="py-0.5" />}
                                   </div>
                                 </React.Fragment>
@@ -581,7 +589,7 @@ export function Entourage() {
                       </div>
                     )
                   }
-                  // Skip rendering for "Matron of Honor" and "Maid of Honor" since they're already rendered above
+                  // Skip rendering for "Maid of Honor" since it's already rendered above with Best Man
                   return null
                 }
 
@@ -633,9 +641,11 @@ export function Entourage() {
                   // Get both bridal party groups
                   const bridesmaids = grouped["Bridesmaids"] || []
                   const groomsmen = grouped["Groomsmen"] || []
-                  
-                  // Only render once (when processing "Bridesmaids")
-                  if (category === "Bridesmaids") {
+                  const hasAny = groomsmen.length > 0 || bridesmaids.length > 0
+
+                  // Only render once when processing "Groomsmen" (comes first in ROLE_CATEGORY_ORDER).
+                  // This ensures the section shows when only Groomsmen exist (no Bridesmaids in data).
+                  if (category === "Groomsmen" && hasAny) {
                     return (
                       <React.Fragment key="BridalPartySection">
                         {/* Groomsmen/Bridesmaids section */}
@@ -670,7 +680,7 @@ export function Entourage() {
                       </React.Fragment>
                     )
                   }
-                  // Skip rendering for "Groomsmen" since it's already rendered above
+                  // Skip "Groomsmen" when no members in either (already returned null above), skip "Bridesmaids" since rendered with Groomsmen
                   return null
                 }
 

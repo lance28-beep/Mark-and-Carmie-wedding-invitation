@@ -71,12 +71,10 @@ export function LoveStory() {
           layout="image-left"
           isFirst={true}
           imageSrc="/gallery/couple (2).jpg"
-          title="Our Love Story"
+          title="A Love Written in His Time and Grace"
           text={
             <>
-              <p className="mb-4">
-              A Love Written in His Time and Grace
-              </p>
+
               <p>
               Carmie, a strong and independent eldest daughter who had spent 14 years in prayerful waiting, carried in her heart a quiet promise—to accept as her husband only the man God had lovingly chosen for her.
               Mark, after seasons of heartache and disappointment, laid his desires at the Lord’s feet, praying that this time he would listen, trust God’s will and His divine grace, and joyfully marry the woman God had chosen for him.
@@ -112,14 +110,13 @@ export function LoveStory() {
           text={
             <>
               <p>
-              When God’s guidance became clear—through earnest prayer and time spent in His Word—Mark and Carmie stepped forward in faith and chose to be married after four months of knowing one another. To some, it seemed swift; to others, a whirlwind.
-              </p>
+              When God’s guidance became clear—through earnest prayer and time spent in His Word—Mark and Carmie stepped forward in faith and chose to be married after four months of knowing one another.              </p>
               <p className="mt-4">
-              By worldly measure, it might have been called impulsive. But in God’s perfect timing and eternal plan, it was neither rushed nor random—IT WAS RIGHT and IT WAS TIME!
-              </p>
+              To some, it seemed swift, to others, a whirlwind.
+              By worldly measure, it might have been called impulsive. But in God’s perfect timing and eternal plan, it was neither rushed nor random—IT WAS RIGHT and IT WAS TIME!              </p>
               <p className="mt-4">
-              "Habakkuk 2:3 For the vision awaits its appointed time; it hastens to the end—it will not lie. If it seems slow, wait for it; it will surely come; it will not delay."
-              </p>
+              “For the vision awaits its appointed time; it hastens to the end—it will not lie. If it seems slow, wait for it; it will surely come; it will not delay."
+              -Habakkuk 2:3              </p>
             </>
           }
         />

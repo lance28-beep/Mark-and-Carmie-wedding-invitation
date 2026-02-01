@@ -180,17 +180,17 @@ export function Gallery() {
           <p
             className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-[#5b3c8a]`}
           >
-            Cherished Moments with {coupleDisplayName}
+            Mark and Carmie
           </p>
           <h2
             className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#5b3c8a]`}
           >
-            Our Love Story in Pictures
+            Our Love in Frames
           </h2>
         </div>
 
         <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#5b3c8a] font-light max-w-xl mx-auto leading-relaxed mt-3`}>
-          Beautiful frames capturing the journey of {coupleDisplayName} — each photograph a precious memory of laughter, love, and the moments that led us to forever.
+          A day frozen in time, filled with laughter, love, and the joy of knowing we are walking together toward forever.
         </p>
 
         <div className="flex items-center justify-center gap-2 mt-6">

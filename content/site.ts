@@ -83,9 +83,9 @@ Now, as they prepare to say yes before God and the people they love most, Cather
 }
 
 export const entourage = [
-  // Best Man & Maid/Matron of Honor
+  // Best Man & Maid of Honor
   { role: "Best Man", name: "Red Casallo" },
-  { role: "Matron of Honor", name: "Imeeliza Timpug" },
+  { role: "Maid of Honor", name: "Imeeliza Timpug" },
 
   // Parents of the Bride
   { role: "Father", name: "Jaime Balajadia (Uncle)", group: "kate-family" },

@@ -80,38 +80,61 @@ export function GuestInformation() {
               </div>
             </div>
 
+            {/* Attire images: Ninang, Ninong, Guest */}
             <div className="mb-5 sm:mb-6 md:mb-8 lg:mb-10 relative z-10 px-2">
-              <div className="relative w-full max-w-2xl mx-auto rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src="/Details/guestAttire.png"
-                  alt="Guest Attire Guide"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-contain"
-                  priority
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
+                <div className="flex flex-col items-center">
+                  <div className="relative w-full aspect-[3/4] max-h-[280px] rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src="/Details/ninang.png"
+                      alt="Ninang Attire Guide"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 100vw, 280px"
+                    />
+                  </div>
+                  <p className={`${cinzel.className} mt-2 sm:mt-3 text-sm sm:text-base font-medium text-[#B58E65]`}>Ninang</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="relative w-full aspect-[3/4] max-h-[280px] rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src="/Details/Ninong.png"
+                      alt="Ninong Attire Guide"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 100vw, 280px"
+                    />
+                  </div>
+                  <p className={`${cinzel.className} mt-2 sm:mt-3 text-sm sm:text-base font-medium text-[#B58E65]`}>Ninong</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="relative w-full aspect-[3/4] max-h-[280px] rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src="/Details/guest.png"
+                      alt="Guest Attire Guide"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 100vw, 280px"
+                    />
+                  </div>
+                  <p className={`${cinzel.className} mt-2 sm:mt-3 text-sm sm:text-base font-medium text-[#B58E65]`}>Guest</p>
+                </div>
               </div>
-            </div>
-
-            <div className="mb-5 sm:mb-6 md:mb-8 lg:mb-10 relative z-10 px-2">
-              <div className="mb-3 sm:mb-4 md:mb-5">
-                <h5 className={`${cinzel.className} text-base sm:text-lg md:text-xl lg:text-2xl text-center text-[#B58E65] mb-2 sm:mb-3`}>
-                  Attire guide
-                </h5>
-                <p className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg text-center text-[#B58E65] font-semibold`}>
-                  Strictly semi formal/ formal attire
+              <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-6 md:gap-8 text-center mt-3 sm:mt-4">
+                <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#B58E65]`}>
+                  <span className="font-semibold">Ladies:</span> Long dress / Sabbath Dress / Cocktail dress
+                </p>
+                <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#B58E65]`}>
+                  <span className="font-semibold">Gentlemen:</span> Longsleeves / Polo, Slacks
                 </p>
               </div>
-              <p className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-center text-[#B58E65]/90 max-w-3xl mx-auto leading-relaxed sm:leading-loose`}>
-                We know many like to come dressed to compliment the big day. Provided below is the color palette of our day. We look forward to seeing you all!
-              </p>
             </div>
 
-            {/* Color Palette - circles + name below; compact inline on mobile (e.g. iPhone SE) */}
-            <div className="flex flex-nowrap items-end justify-center gap-1.5 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 relative z-10 sm:flex-wrap p-2 sm:p-5 md:p-6 rounded-xl bg-white/80">
+            {/* Color Palette - circles + name below; placed directly under guest attire images */}
+            <div className="flex flex-nowrap items-end justify-center gap-1.5 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 relative z-10 sm:flex-wrap p-2 sm:p-5 md:p-6 rounded-xl bg-white/80 mb-5 sm:mb-6 md:mb-8 lg:mb-10">
               {[
                 { hex: '#E8CDB8', name: 'Beige' },
-                { hex: '#D1B096', name: 'Nude' },
+                { hex: '#DDBDA6', name: 'Nude' },
                 { hex: '#B58E65', name: 'Camel' },
                 { hex: '#EDE0D7', name: 'Light Beige' },
               ].map(({ hex, name }) => {
@@ -134,6 +157,20 @@ export function GuestInformation() {
                 )
               })}
             </div>
+
+            <div className="relative z-10 px-2">
+              <div className="mb-3 sm:mb-4 md:mb-5">
+                <h5 className={`${cinzel.className} text-base sm:text-lg md:text-xl lg:text-2xl text-center text-[#B58E65] mb-2 sm:mb-3`}>
+                  Attire guide
+                </h5>
+                <p className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg text-center text-[#B58E65] font-semibold`}>
+                  Strictly semi formal/ formal attire
+                </p>
+              </div>
+              <p className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-center text-[#B58E65]/90 max-w-3xl mx-auto leading-relaxed sm:leading-loose`}>
+                We know many like to come dressed to compliment the big day. Provided above is the color palette of our day. We look forward to seeing you all!
+              </p>
+            </div>
           </div>
 
           {/* Arrival Time & Reception Guidelines - white background */}
@@ -146,7 +183,7 @@ export function GuestInformation() {
                   </h4>
                   <div className="space-y-2 sm:space-y-2.5">
                     <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#B58E65]/95 leading-relaxed`}>
-                      Kindly arrive by <span className="font-semibold text-[#B58E65]">3:30 PM</span> so we can begin the wedding ceremony promptly at exactly <span className="font-semibold text-[#B58E65]">4:00 PM</span>.
+                      Kindly arrive by <span className="font-semibold text-[#B58E65]">2:30 PM</span> so we can begin the wedding ceremony promptly at exactly <span className="font-semibold text-[#B58E65]">3:00 PM</span>.
                     </p>
                     <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#B58E65]/95 leading-relaxed`}>
                       Your punctuality means so much to us — and don&apos;t forget to have a light snack beforehand so you can enjoy the celebration comfortably!

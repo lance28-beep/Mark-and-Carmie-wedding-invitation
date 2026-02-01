@@ -2,7 +2,6 @@ import fs from "fs/promises"
 import path from "path"
 import Image from "next/image"
 import MasonryGallery from "@/components/masonry-gallery"
-import { siteConfig } from "@/content/site"
 import { Cinzel, Cormorant_Garamond } from "next/font/google"
 
 const cinzel = Cinzel({
@@ -117,13 +116,18 @@ export default async function GalleryPage() {
             <div className="w-8 sm:w-12 md:w-16 h-px bg-[#c9b2ff]" />
           </div>
           
+          <p
+            className={`${cormorant.className} text-[0.7rem] sm:text-xs md:text-sm uppercase tracking-[0.28em] text-[#5b3c8a] mb-2`}
+          >
+            Mark and Carmie
+          </p>
           <h1
             className={`${cinzel.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-[#5b3c8a] mb-2 sm:mb-3 md:mb-4`}
           >
-            Our Love Story Gallery
+            Our Love in Frames
           </h1>
           <p className={`${cormorant.className} text-xs sm:text-sm md:text-base lg:text-lg text-[#5b3c8a] font-light max-w-xl mx-auto leading-relaxed px-2`}>
-            Every photograph tells a story of {siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}'s journey to forever
+            A day frozen in time, filled with laughter, love, and the joy of knowing we are walking together toward forever.
           </p>
           
           {/* Decorative element below subtitle */}
