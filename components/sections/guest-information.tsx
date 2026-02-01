@@ -94,6 +94,9 @@ export function GuestInformation() {
                     />
                   </div>
                   <p className={`${cinzel.className} mt-2 sm:mt-3 text-sm sm:text-base font-medium text-[#B58E65]`}>Ninang</p>
+                  <p className={`${cormorant.className} mt-1 sm:mt-1.5 text-xs sm:text-sm text-[#B58E65] text-center`}>
+                    Champagne, Cream or Beige Gown
+                  </p>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="relative w-full aspect-[3/4] max-h-[280px] rounded-xl overflow-hidden shadow-lg">
@@ -106,6 +109,9 @@ export function GuestInformation() {
                     />
                   </div>
                   <p className={`${cinzel.className} mt-2 sm:mt-3 text-sm sm:text-base font-medium text-[#B58E65]`}>Ninong</p>
+                  <p className={`${cormorant.className} mt-1 sm:mt-1.5 text-xs sm:text-sm text-[#B58E65] text-center`}>
+                    Dark Gray Suit, White Longsleeves
+                  </p>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="relative w-full aspect-[3/4] max-h-[280px] rounded-xl overflow-hidden shadow-lg">
@@ -118,15 +124,11 @@ export function GuestInformation() {
                     />
                   </div>
                   <p className={`${cinzel.className} mt-2 sm:mt-3 text-sm sm:text-base font-medium text-[#B58E65]`}>Guest</p>
+                  <div className={`${cormorant.className} mt-1 sm:mt-1.5 text-xs sm:text-sm text-[#B58E65] text-center space-y-0.5`}>
+                    <p><span className="font-semibold">Ladies:</span> Long dress / Sabbath Dress / Cocktail dress</p>
+                    <p><span className="font-semibold">Gentlemen:</span> Longsleeves / Polo, Slacks</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-6 md:gap-8 text-center mt-3 sm:mt-4">
-                <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#B58E65]`}>
-                  <span className="font-semibold">Ladies:</span> Long dress / Sabbath Dress / Cocktail dress
-                </p>
-                <p className={`${cormorant.className} text-xs sm:text-sm md:text-base text-[#B58E65]`}>
-                  <span className="font-semibold">Gentlemen:</span> Longsleeves / Polo, Slacks
-                </p>
               </div>
             </div>
 
