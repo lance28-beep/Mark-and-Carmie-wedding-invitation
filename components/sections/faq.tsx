@@ -50,7 +50,7 @@ const faqItems: FAQItem[] = [
   {
     question: "Is there a dress code?",
     answer:
-      `Wedding ATTIRE found in guest details section.\n\nAttire guide\nStrictly semi formal/ formal attire\n\nWe know many like to come dressed to compliment the big day. Provided below is the color palette of our day. We look forward to seeing you all!`,
+      `Strictly semi-formal or formal attire. Ninang: Champagne, Cream or Beige Gown. Ninong: Dark Gray Suit, White Longsleeves. Guests — Ladies: Long dress, Sabbath Dress, or Cocktail dress; Gentlemen: Longsleeves, Polo, Slacks. See the [GUEST_INFO_LINK]Guest Information section[\/GUEST_INFO_LINK] for the full attire guide with images and color palette.`,
   },
   {
     question: "Will there be assigned seating?",
@@ -184,80 +184,49 @@ export function FAQ() {
                           ) : item.question === "Is there a dress code?" ? (
                             <div className="space-y-3 sm:space-y-4">
                               <p className={`${cormorant.className} text-[#606C60] font-medium leading-relaxed sm:leading-loose text-xs sm:text-sm md:text-base lg:text-lg tracking-wide`}>
-                                {item.answer}
+                                {item.answer.split("[GUEST_INFO_LINK]")[0]}
+                                <a
+                                  href="#guest-information"
+                                  className="text-[#606C60] underline font-bold hover:text-[#606C60]/80 transition-colors"
+                                  onClick={(e) => {
+                                    e.preventDefault()
+                                    document.getElementById("guest-information")?.scrollIntoView({ behavior: "smooth" })
+                                  }}
+                                >
+                                  {item.answer.match(/\[GUEST_INFO_LINK\](.*?)\[\/GUEST_INFO_LINK\]/s)?.[1] || "Guest Information section"}
+                                </a>
+                                {item.answer.split("[/GUEST_INFO_LINK]")[1]}
                               </p>
-                              {/* Color Palette */}
-                              <div className="flex items-end justify-center gap-1.5 sm:gap-2 md:gap-3 mt-4 sm:mt-5">
-                                {/* Color 1: #606C60 */}
-                                <div className="flex-1 max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[70px] group">
-                                  <div 
-                                    className="w-full h-16 sm:h-20 md:h-24 lg:h-28 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
-                                    style={{ 
-                                      backgroundColor: '#606C60',
-                                      clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                                      borderRadius: '0 0 4px 4px',
-                                      boxShadow: '0 2px 8px rgba(96, 108, 96, 0.25)',
-                                      border: '2px solid rgba(96, 108, 96, 0.3)'
-                                    }}
-                                  />
-                                </div>
-                                
-                                {/* Color 2: #E1D5C7 */}
-                                <div className="flex-1 max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[70px] group">
-                                  <div 
-                                    className="w-full h-16 sm:h-20 md:h-24 lg:h-28 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
-                                    style={{ 
-                                      backgroundColor: '#E1D5C7',
-                                      clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                                      borderRadius: '0 0 4px 4px',
-                                      boxShadow: '0 2px 8px rgba(225, 213, 199, 0.25)',
-                                      border: '2px solid rgba(96, 108, 96, 0.3)'
-                                    }}
-                                  />
-                                </div>
-                                
-                                {/* Color 3: #96A298 */}
-                                <div className="flex-1 max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[70px] group">
-                                  <div 
-                                    className="w-full h-16 sm:h-20 md:h-24 lg:h-28 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
-                                    style={{ 
-                                      backgroundColor: '#96A298',
-                                      clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                                      borderRadius: '0 0 4px 4px',
-                                      boxShadow: '0 2px 8px rgba(150, 162, 152, 0.25)',
-                                      border: '2px solid rgba(96, 108, 96, 0.3)'
-                                    }}
-                                  />
-                                </div>
-                                
-                                {/* Color 4: #DFDBD2 */}
-                                <div className="flex-1 max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[70px] group">
-                                  <div 
-                                    className="w-full h-16 sm:h-20 md:h-24 lg:h-28 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
-                                    style={{ 
-                                      backgroundColor: '#DFDBD2',
-                                      clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                                      borderRadius: '0 0 4px 4px',
-                                      boxShadow: '0 2px 8px rgba(223, 219, 210, 0.25)',
-                                      border: '2px solid rgba(96, 108, 96, 0.3)'
-                                    }}
-                                  />
-                                </div>
-                                
-                                {/* Color 5: #555754 */}
-                                <div className="flex-1 max-w-[40px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[70px] group">
-                                  <div 
-                                    className="w-full h-16 sm:h-20 md:h-24 lg:h-28 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
-                                    style={{ 
-                                      backgroundColor: '#555754',
-                                      clipPath: 'polygon(0 12%, 50% 0%, 100% 12%, 100% 100%, 0% 100%)',
-                                      borderRadius: '0 0 4px 4px',
-                                      boxShadow: '0 2px 8px rgba(85, 87, 84, 0.25)',
-                                      border: '2px solid rgba(96, 108, 96, 0.3)'
-                                    }}
-                                  />
-                                </div>
+                              {/* Color Palette - aligned with Guest Information section */}
+                              <div className="flex items-end justify-center gap-1.5 sm:gap-5 md:gap-6 lg:gap-8 flex-wrap">
+                                {[
+                                  { hex: "#E8CDB8", name: "Beige" },
+                                  { hex: "#DDBDA6", name: "Nude" },
+                                  { hex: "#B58E65", name: "Camel" },
+                                  { hex: "#EDE0D7", name: "Light Beige" },
+                                ].map(({ hex, name }) => {
+                                  const r = parseInt(hex.slice(1, 3), 16)
+                                  const g = parseInt(hex.slice(3, 5), 16)
+                                  const b = parseInt(hex.slice(5, 7), 16)
+                                  return (
+                                    <div key={name} className="flex flex-col items-center group shrink-0">
+                                      <div
+                                        className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl"
+                                        style={{
+                                          backgroundColor: hex,
+                                          boxShadow: `0 2px 8px rgba(${r}, ${g}, ${b}, 0.25)`,
+                                        }}
+                                      />
+                                      <p className={`${cormorant.className} mt-1 sm:mt-2 text-[10px] sm:text-xs font-medium text-[#606C60]`}>
+                                        {name}
+                                      </p>
+                                    </div>
+                                  )
+                                })}
                               </div>
+                              <p className={`${cormorant.className} text-xs sm:text-sm text-[#606C60]/90 text-center italic`}>
+                                We know many like to come dressed to compliment the big day. We look forward to seeing you all!
+                              </p>
                             </div>
                           ) : (
                             <p className={`${cormorant.className} text-[#606C60] font-medium leading-relaxed sm:leading-loose text-xs sm:text-sm md:text-base lg:text-lg whitespace-pre-line tracking-wide`}>
