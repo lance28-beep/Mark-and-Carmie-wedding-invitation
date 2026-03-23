@@ -116,7 +116,7 @@ export function GuestInformation() {
                 <div className="flex flex-col items-center">
                   <div className="relative w-full aspect-[3/4] max-h-[280px] rounded-xl overflow-hidden shadow-lg">
                     <Image
-                      src="/Details/guest.png"
+                      src="/Details/image.png"
                       alt="Guest Attire Guide"
                       fill
                       className="object-contain"
@@ -132,32 +132,68 @@ export function GuestInformation() {
               </div>
             </div>
 
-            {/* Color Palette - circles + name below; placed directly under guest attire images */}
-            <div className="flex flex-nowrap items-end justify-center gap-1.5 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 relative z-10 sm:flex-wrap p-2 sm:p-5 md:p-6 rounded-xl bg-white/80 mb-5 sm:mb-6 md:mb-8 lg:mb-10">
-              {[
-                { hex: '#E8CDB8', name: 'Beige' },
-                { hex: '#DDBDA6', name: 'Nude' },
-                { hex: '#B58E65', name: 'Camel' },
-                { hex: '#EDE0D7', name: 'Light Beige' },
-              ].map(({ hex, name }) => {
-                const r = parseInt(hex.slice(1, 3), 16)
-                const g = parseInt(hex.slice(3, 5), 16)
-                const b = parseInt(hex.slice(5, 7), 16)
-                return (
-                  <div key={name} className="flex flex-col items-center group shrink-0">
-                    <div
-                      className="w-10 h-10 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 rounded-full transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl"
-                      style={{
-                        backgroundColor: hex,
-                        boxShadow: `0 2px 8px rgba(${r}, ${g}, ${b}, 0.25)`,
-                      }}
-                    />
-                    <p className={`${cormorant.className} mt-1 sm:mt-3 text-[8px] sm:text-xs md:text-sm font-medium text-[#B58E65] leading-tight`}>
-                      {name}
-                    </p>
-                  </div>
-                )
-              })}
+            {/* Color Palette - circles + name below; separated into day colors + guest colors */}
+            <div className="flex flex-col items-center gap-4 sm:gap-5 md:gap-6 mb-5 sm:mb-6 md:mb-8 lg:mb-10">
+              {/* Day / base palette */}
+              <div className="flex flex-nowrap items-end justify-center gap-1.5 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 relative z-10 sm:flex-wrap p-2 sm:p-5 md:p-6 rounded-xl bg-white/80 w-full">
+                {[
+                  { hex: "#E2CDBA", name: "Beige" },
+                  { hex: "#AF8E6B", name: "Camel" },
+                  { hex: "#E9DFD6", name: "Light Beige" },
+                ].map(({ hex, name }) => {
+                  const r = parseInt(hex.slice(1, 3), 16)
+                  const g = parseInt(hex.slice(3, 5), 16)
+                  const b = parseInt(hex.slice(5, 7), 16)
+                  return (
+                    <div key={name} className="flex flex-col items-center group shrink-0">
+                      <div
+                        className="w-10 h-10 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 rounded-full transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl"
+                        style={{
+                          backgroundColor: hex,
+                          boxShadow: `0 2px 8px rgba(${r}, ${g}, ${b}, 0.25)`,
+                        }}
+                      />
+                      <p className={`${cormorant.className} mt-1 sm:mt-3 text-[8px] sm:text-xs md:text-sm font-medium text-[#B58E65] leading-tight`}>
+                        {name}
+                      </p>
+                    </div>
+                  )
+                })}
+              </div>
+
+              {/* Guest palette */}
+              <div className="w-full">
+                {/* <p
+                  className={`${cinzel.className} text-[11px] sm:text-xs md:text-sm font-semibold text-[#B58E65] text-center mb-2 sm:mb-3`}
+                >
+                  Guest Colors
+                </p> */}
+                <div className="flex flex-nowrap items-end justify-center gap-1.5 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 relative z-10 sm:flex-wrap p-2 sm:p-5 md:p-6 rounded-xl bg-white/80 w-full">
+                  {[
+                    { hex: "#D8C8E2", name: "Lavender" },
+                    { hex: "#C8CFBD", name: "Sage" },
+                    { hex: "#F3E7E9", name: "Blush Cream" },
+                  ].map(({ hex, name }) => {
+                    const r = parseInt(hex.slice(1, 3), 16)
+                    const g = parseInt(hex.slice(3, 5), 16)
+                    const b = parseInt(hex.slice(5, 7), 16)
+                    return (
+                      <div key={name} className="flex flex-col items-center group shrink-0">
+                        <div
+                          className="w-10 h-10 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 rounded-full transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl"
+                          style={{
+                            backgroundColor: hex,
+                            boxShadow: `0 2px 8px rgba(${r}, ${g}, ${b}, 0.25)`,
+                          }}
+                        />
+                        <p className={`${cormorant.className} mt-1 sm:mt-3 text-[8px] sm:text-xs md:text-sm font-medium text-[#B58E65] leading-tight`}>
+                          {name}
+                        </p>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
             </div>
 
             <div className="relative z-10 px-2">

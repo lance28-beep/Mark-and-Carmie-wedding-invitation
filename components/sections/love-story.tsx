@@ -77,7 +77,7 @@ export function LoveStory() {
 
               <p>
               Carmie, a strong and independent eldest daughter who had spent 14 years in prayerful waiting, carried in her heart a quiet promise—to accept as her husband only the man God had lovingly chosen for her.
-              Mark, after seasons of heartache and disappointment, laid his desires at the Lord’s feet, praying that this time he would listen, trust God’s will and His divine grace, and joyfully marry the woman God had chosen for him.
+              Mark, after seasons of disappointments and failed relationships, laid his desires at the Lord’s feet, praying that this time he would listen, trust God’s will and His divine grace, and joyfully marry the woman God had chosen for him.
               </p>
             </>
           }

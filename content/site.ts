@@ -15,7 +15,7 @@ export const siteConfig = {
   },
   details: {
     rsvp: {
-      deadline: "July 01, 2026",
+      deadline: "May 31, 2026",
       contact: "Carmie Borillo",
       phone: "647-622-5353",
     },
