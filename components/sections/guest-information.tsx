@@ -110,7 +110,7 @@ export function GuestInformation() {
                   </div>
                   <p className={`${cinzel.className} mt-2 sm:mt-3 text-sm sm:text-base font-medium text-[#B58E65]`}>Ninong</p>
                   <p className={`${cormorant.className} mt-1 sm:mt-1.5 text-xs sm:text-sm text-[#B58E65] text-center`}>
-                    Dark Gray Suit, White Longsleeves
+                    Dark Suit, White Longsleeves
                   </p>
                 </div>
                 <div className="flex flex-col items-center">
