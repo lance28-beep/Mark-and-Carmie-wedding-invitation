@@ -116,7 +116,7 @@ export function GuestInformation() {
                 <div className="flex flex-col items-center">
                   <div className="relative w-full aspect-[3/4] max-h-[280px] rounded-xl overflow-hidden shadow-lg">
                     <Image
-                      src="/Details/image.png"
+                      src="/Details/detailssection.png"
                       alt="Guest Attire Guide"
                       fill
                       className="object-contain"
