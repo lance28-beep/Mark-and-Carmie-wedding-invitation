@@ -334,7 +334,7 @@ export function Details() {
           {/* Reception image */}
           <div className="relative h-64 sm:h-80 md:h-96 w-full">
             <Image
-              src="/Details/Life Hope Center.jpg"
+              src="/decoration/recepcion.jpg"
               alt={receptionLocationFormatted}
               fill
               className="object-cover"
