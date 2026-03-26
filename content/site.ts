@@ -30,8 +30,8 @@ export const siteConfig = {
     guestsTime: "2:30 PM",
   },
   reception: {
-    location: "Life Hope Center, Southern Asia-Pacific Division (SSD), Aguinaldo Highway, San Miguel II Bypass, Silang, Cavite, Philippines",
-    venue: "Life Hope Center, Southern Asia-Pacific Division (SSD)",
+    location: "Grandeur Palace Co.",
+    venue: "Tagaytay- Sta Rosa Rd,. Silang, Philippines",
     date: "July 20, 2026",
     time: "5:00 PM",
   },

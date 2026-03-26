@@ -60,9 +60,9 @@ export function Details() {
   const ceremonyLocation =
     "Aguinaldo Highway, Brgy. Biga II, Silang, Cavite 4118, Philippines"
   const receptionVenue =
-    "Life Hope Center,  Southern Asia-Pacific Division (SSD)"
+    siteConfig.reception.location
   const receptionLocation =
-    "Aguinaldo Highway, San Miguel II Bypass, Silang, Cavite, Philippines"
+    siteConfig.reception.venue;
   const ceremonyLocationFormatted = formatAddress(ceremonyLocation)
   const receptionLocationFormatted = formatAddress(receptionLocation)
   
