@@ -136,7 +136,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpen, visible }) => {
               }}
             >
               <Image
-                src="/monogram/monogram.png"
+                src="/monogram/newMonogram.png"
                 alt="Monogram"
                 fill
                 className="object-contain drop-shadow-lg"
